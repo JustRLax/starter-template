@@ -31,6 +31,7 @@
 }
 .font-list {
     padding: 20px 0;
+    text-align: center;
     li {
         margin-bottom: 10px;
     }
@@ -124,6 +125,12 @@
             font-style: italic;
         }
     }
+}
+.buttons {
+    border-top: 1px dashed #cccccc;
+    border-bottom: 1px dashed #cccccc;
+    width: 100%;
+    padding-top: 20px;
 }
 .colors {
     @include container;
