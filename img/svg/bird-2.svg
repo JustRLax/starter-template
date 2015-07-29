@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="104px" height="21px" viewBox="0 0 104 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>bird</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-HD" sketch:type="MSArtboardGroup" transform="translate(-1047.000000, -112.000000)" fill="#333333">
+            <g id="Intro" sketch:type="MSLayerGroup" transform="translate(-99.000000, 0.000000)">
+                <g id="landscape" sketch:type="MSShapeGroup">
+                    <path d="M1194.79939,124.181903 C1211.50888,100.77573 1249.94304,119.166247 1249.94304,119.166247 C1249.94304,119.166247 1215.58636,106.961595 1195.75432,131.947716 C1173.22914,109.166097 1146.33888,132.541109 1146.33888,132.541109 C1146.33888,132.541109 1173.0754,104.11928 1194.79939,124.181903 Z" id="bird"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,40 @@
+@function em($target, $context: $base-font-size) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0em;
+}
+$base-font-size: 16px;
+
+@mixin max-wmq($size) {
+    @media only screen and (max-width: em($size)){@content;}
+}
+
+@mixin min-wmq($size) {
+    @media only screen and (min-width: em($size)){@content;}
+}
+
+@mixin max-hmq($size) {
+    @media only screen and (max-height: em($size)){@content;}
+}
+
+@mixin min-hmq($size) {
+    @media only screen and (min-height: em($size)){@content;}
+}
+
+@mixin at2x($file, $type, $width, $height) {
+    background-image: url($file + '.' + $type);
+    @media (-webkit-min-device-pixel-ratio: 1.5), (-moz-min-device-pixel-ratio: 1.5) {
+        & {
+            background-image: url($file + '@2x.' + $type);
+            -webkit-background-size: $width $height;
+        }
+    }
+}
+@mixin clearfix {
+    &:after {
+        content: " ";
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}

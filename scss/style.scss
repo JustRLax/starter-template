@@ -1,0 +1,66 @@
+@import "reset";
+@import "mixins";
+@import "animate";
+@import "patterns";
+// @mixin sprite {@include at2x('../img/sprite', 'png', 300px, 500px)}
+
+/////////Fonts
+$font-1: 'Futura'  'Helvetica Neue', 'Helvetica', sans-serif;
+$font-2: 'Futura', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+//////////Colors
+$purple: #2A2240;
+$teal: #0B5663;
+
+/////////ANIMATIONS
+@include setup-fadeIn;
+/* @include animated(.2s); */
+/* @include fadeIn; */
+
+
+/////////////////GLOBAL
+*, *:before, *:after {
+	box-sizing: border-box;
+// 	transform: translate(0,0);
+}
+img, iframe, video {
+	max-width: 100%;
+}
+ul {
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+html {
+	font-size: 24px;
+}
+body {
+	height: 100%;
+	width: 100%;
+	font-family: $font-1;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-style: italic;
+}
+a {
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+.container {
+    max-width: 1220px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+svg {
+	width: 100%;
+}
+
+///////////////Build Styles
+
+

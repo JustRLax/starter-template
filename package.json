@@ -1,0 +1,22 @@
+{
+  "name": "ClientBuild",
+  "title": "Client Website",
+  "author": "Real Art",
+  "copyright": "2015",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-autoprefixer": "~0.8.2",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-sass": "~0.6.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "~0.6.0",
+    "grunt-grunticon": "~1.0.0",
+    "grunt-jekyll": "~0.4.1",
+    "grunt-shell": "~0.6.4",
+    "grunt-svgstore": "~0.3.0",
+    "load-grunt-tasks": "~0.2.1"
+  }
+}
