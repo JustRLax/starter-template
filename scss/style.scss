@@ -26,12 +26,11 @@ $susy: (
 $noGutter_layout: layout(12 0 fluid float inside);
 $five_layout: layout(5 .125 fluid float after);
 
-  
 // @mixin sprite {@include at2x('../img/sprite', 'png', 300px, 500px)}
 
 /////////Fonts
-$font-1: 'Futura'  'Helvetica Neue', 'Helvetica', sans-serif;
-$font-2: 'Futura', 'Helvetica Neue', 'Helvetica', sans-serif;
+$font-1: 'Futura' ,'Helvetica Neue', 'Helvetica', sans-serif;
+$font-2: 'Helvetica Neue', 'Helvetica', sans-serif;
 
 //////////Colors
 $purple: #2A2240;
@@ -68,6 +67,7 @@ body {
 	height: 100%;
 	width: 100%;
 	font-family: $font-1;
+	font-size: 16px;
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 }

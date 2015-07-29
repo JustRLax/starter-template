@@ -45,7 +45,8 @@ module.exports = function(grunt) {
       global: {
         src: 'css/style-unprefixed.css',
         dest: 'css/style.css'
-      }
+      },
+      
     },
 
     shell: {

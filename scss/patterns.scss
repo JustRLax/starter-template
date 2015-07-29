@@ -29,6 +29,102 @@
     float: left;
     margin-top: 10px;
 }
+.font-list {
+    padding: 20px 0;
+    li {
+        margin-bottom: 10px;
+    }
+}
+.typography {
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: $font-2;
+    h1 {
+        font-size: 3em;
+        margin-bottom: 15px;
+        font-weight: 700;
+        margin-top: 8px;
+    }
+    h2 {
+        font-size: 2em;
+        font-weight: 700;
+        margin-bottom: 15px;
+        margin-top: 8px;
+    }
+    h3 {
+        font-size: 1.75em;
+        font-weight: 700;
+        margin-bottom: 15px;
+        margin-top: 8px;
+    }
+    h4 {
+        font-size: 1.5em;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        margin-top: 8px;
+    }
+    h5 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+        margin-top: 8px;
+    }
+    h6 {
+        font-size: 1.25em;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        margin-top: 8px;
+    }
+    p.dropcap:first-letter {
+        float: left;
+        font-weight: 700;
+        font-size: 3.25em;
+        line-height: 46px;
+        padding: 0 5px 0px 0;
+    }
+    p {
+        font-size: 1em;
+        line-height: 150%;
+        margin-bottom: 15px;
+    }
+    ul, ol {
+        padding-left: 20px;
+        margin-bottom: 15px;
+    }
+    li {
+        line-height: 150%;
+    }
+    ul li {
+        list-style: disc;
+    }
+    ol li {
+        list-style: decimal;
+    }
+    a {
+        color: #00B6E2;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    sup {
+        vertical-align: super;
+        font-size: smaller;
+    }
+    sub {
+        vertical-align: sub;
+        font-size: smaller;
+    }
+    blockquote {
+        padding-left: 20px;
+        border-left: 10px solid #dadada;
+        margin-bottom: 15px;
+        display: block;
+        cite {
+            color: #4F4F4D;
+            font-style: italic;
+        }
+    }
+}
 .colors {
     @include container;
     border-bottom: 1px dashed #cccccc;
