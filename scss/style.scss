@@ -1,7 +1,32 @@
 @import "reset";
 @import "mixins";
 @import "animate";
-@import "patterns";
+@import "susy";
+//Base Susy Grid Styles
+$susy: (
+    flow: ltr, //ltr | rtl
+    output: float, //float | isolate (absolute pos hack)
+    math: fluid, // fluid | static (requires column-width)
+    column-width: false, // false | value
+    container: 1440px, // px or % | auto
+    container-position: 20px, // left | center| right| <length> {*2} (grid padding)
+    last-flow: from, // from (last float:left) | to (last float:right)
+    columns: 12,
+    gutters: .125, // 1 = single column | .5 = half column | 1/3 = 1/3 column
+    gutter-position: after, // before (1st margin-left: 0) | after (last margin-right: 0) | split (both-sides) | inside (gutter padding) | inside-static (gutter static padding)
+    global-box-sizing: border-box, // Changes the way Susy does math
+    debug: (
+        image: hide, // show | hide
+        color: rgba(#cccccc, .25),
+        output: background, // background | overlay
+        toggle: top right,
+    )
+);
+//Shorthand for setting up Susy Grids $layout_name(columns | gutters | math | output | gutter-position)
+$noGutter_layout: layout(12 0 fluid float inside);
+$five_layout: layout(5 .125 fluid float after);
+
+  
 // @mixin sprite {@include at2x('../img/sprite', 'png', 300px, 500px)}
 
 /////////Fonts
@@ -29,6 +54,10 @@ img, iframe, video {
 ul {
 	padding: 0;
 }
+figure {
+    margin: 0;
+    padding: 0;
+}
 li {
 	list-style: none;
 }
@@ -53,8 +82,8 @@ a {
     transition: all .2s ease-in-out;
 }
 .container {
-    max-width: 1220px;
-    padding: 0 20px;
+    max-width: 1440px;
+    padding: 0 40px;
     margin: 0 auto;
 }
 svg {
@@ -62,5 +91,5 @@ svg {
 }
 
 ///////////////Build Styles
-
+@import "patterns";
 

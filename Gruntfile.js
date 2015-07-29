@@ -58,6 +58,9 @@ module.exports = function(grunt) {
     },
    imagemin: {
       dynamic: {
+        options: {
+            optimizationLevel: 4
+        },
         files: [{
           expand: true,
           cwd: 'img/',
@@ -81,7 +84,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       site: {
-        files: ['index.html', '_layouts/*.html', '_includes/*.html'],
+        files: ['*.html', '_layouts/*.html', '_includes/*.html'],
         tasks: ['shell:jekyllBuild']
       },
       js: {
