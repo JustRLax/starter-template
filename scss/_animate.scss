@@ -1,8 +1,3 @@
-@mixin animation-delay($speed:1s) {
-	-webkit-animation-delay: $speed;
-	-moz-animation-delay: $speed;
-	animation-delay: $speed;
-}
 @mixin animated ($time: .2s) {
 	-webkit-animation-duration: $time;
 	   -moz-animation-duration: $time;
@@ -12,11 +7,6 @@
 	   -moz-animation-fill-mode: both;
 	     -o-animation-fill-mode: both;
 	        animation-fill-mode: both;
-}
-@mixin transition-delay($speed:1s) {
-	-webkit-transition-delay: $speed;
-	-moz-transition-delay: $speed;
-	transition-delay: $speed;
 }
 @mixin setup-flash {
     @-webkit-keyframes flash {

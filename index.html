@@ -13,7 +13,7 @@ title: Home Page
                     <li><strong>Font 2: </strong>'Helvetica Neue', 'Helvetica', sans-serif;</li>
                 </ul> <!-- / .font-list -->
                 <h3 class="subhead">Content</h3>
-                <div class="typography">
+                <section class="typography">
                     <p class="dropcap">Borem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, eum, facere! Eligendi, neque, voluptas quibusdam enim culpa dignissimos dolor in voluptatem sapiente facilis eveniet ipsa quod tempore aut ad aliquid est architecto alias sed corporis esse consequuntur suscipit dolore voluptatum magni officiis iusto similique dicta quidem ut ullam distinctio quos.</p>
                     <h1>This is a heading 1</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, <em>incidunt nostrum</em> recusandae nobis voluptas repellat aliquid beatae esse totam maxime!</p>
@@ -46,21 +46,35 @@ title: Home Page
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, id, laudantium, tempora, commodi hic maxime amet cumque natus saepe tempore eos reprehenderit autem fugit. Tempora, neque quidem perspiciatis alias ratione.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorum ex nam ipsa beatae aut laborum illum eum laudantium incidunt? Soluta, magni reiciendis voluptas voluptatibus quas ullam perspiciatis. Quidem nobis consequatur earum.</p>
                     <div class="fitted">
-                        
+                        <h3 class="subhead">Font Flex</h3>
+                        <div class="font-flex">
+                            <h2>This is a nice heading</h2>
+                            <p>This is a description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse fuga accusantium numquam. Facilis, assumenda, itaque vitae mollitia incidunt tempore similique!</p>
+                        </div> <!-- / .font-flex -->
                     </div> <!-- / .fitted -->                    
-                </div> <!-- / .typography -->
+                </section> <!-- / .typography -->
     
     <!-- //////////////////BUTTONS -->
                 <h2 class="doc-subheading">Buttons</h2>
                 <div class="buttons">
                     <ul>
-                        <li><a href="#" class="sm">Small Button</a></li>
-                        <li><a href="#" class="med">Medium Button</a></li>
-                        <li><a href="#" class="lg">Large Button</a></li>
-                        <li><a href="#" class="play-button">Play</a></li>
+                        <li><a href="#" class="sm button">Small Button</a></li>
+                        <li><a href="#" class="med button">Medium Button</a></li>
+                        <li><a href="#" class="lg button">Large Button</a></li>
+                        <li>
+                            <a href="#" class="play-button" alt="play button">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                <use xlink:href="#shape-play"></use>
+                                </svg>
+                            </a>
+                        </li>
                     </ul>
                     <div class="pagination">
-                        <a href="#" class="prev">Previous</a>
+                        <a href="#" class="pager prev" alt="Previous">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                <use xlink:href="#shape-prev"></use>
+                            </svg>
+                        </a>
                         <ul class="page-numbers">
                             <li><a href="#">1</a></li>
                             <li><a href="#">2</a></li>
@@ -71,7 +85,11 @@ title: Home Page
                             <li><a href="#">7</a></li>
                             <li><a href="#">8</a></li>
                         </ul>
-                        <a href="#" class="next">Next</a>
+                        <a href="#" class="pager next" alt="Next">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                <use xlink:href="#shape-next"></use>
+                            </svg>
+                        </a>
                     </div> <!-- / .pagination -->
                 </div> <!-- / .buttons -->
     
@@ -131,6 +149,276 @@ title: Home Page
                         <div class="half"><img src="http://placehold.it/800x400" alt="title" ></div> <!-- / .half -->
                     </div> <!-- / .wrap -->
                 </div> <!-- / .layout -->
-            
+                
+    <!-- //////////////////IMAGES -->
+                <h2 class="doc-subheading">Images</h2>
+                
+                <div class="images">
+                    <h3 class="subhead">SVG Logo</h3>
+                    <div class="logo" itemscope itemtype="http://schema.org/Organization">
+                        <a itemprop="url" href="http://www.example.com/">
+                            <span itemprop="name" class="hidden">Company Name</span>
+                            <span itemprop="logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-logo"></use>
+                                </svg>
+                            </span>
+                        </a>
+                    </div> <!-- / .logo -->
+                    <h3 class="subhead">Raster Logo</h3>
+                    <div class="logo" itemscope itemtype="http://schema.org/Organization">
+                        <a itemprop="url" href="http://www.example.com/">
+                            <span itemprop="name" class="hidden">Company Name</span>
+                                <img src="img/logo.png" itemprop="logo" alt="logo">
+                        </a>
+                    </div> <!-- / .logo -->
+                    
+                    <h3 class="subhead">Wide Image</h3>
+                    <img src="http://placehold.it/1200x500" alt="Image" class="wide">
+                    
+                    <h3 class="subhead">Square Image</h3>
+                    <img src="http://placehold.it/500x500" alt="Image" class="square">
+                    
+                    <h3 class="subhead">Keep Ratio Background Image</h3>
+                    <div class="keep-ratio">
+                        <div class="image">
+                            Image Name
+                        </div>
+                    </div> <!-- / .ratio -->
+                    
+                    <h3 class="subhead">CSS Loading Icon</h3>
+                    <div class="loading-container">
+                        <div class='loading'></div>
+                    </div> <!-- / .loading-container -->
+                    
+                    <h3 class="subhead">GIF Loading Icon</h3>
+                    <div class="loading-container">
+                        <img src="img/loading.gif" alt="Loading Icon">
+                    </div> <!-- / .loading-container -->
+                    
+                    <h3 class="subhead">Social Icons</h3>
+                    <div class="social-icons">
+                        <ul>
+                            <li class="facebook">
+                                <a href="#" alt="Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-facebook"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="twitter">
+                                <a href="#" alt="Twitter">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-twitter"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="instagram">
+                                <a href="#" alt="Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-instagram"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="linkedin">
+                                <a href="#" alt="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-linkedin"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="youtube">
+                                <a href="#" alt="YouTube">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-youtube"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="vimeo">
+                                <a href="#" alt="Vimeo">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-vimeo"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="tumblr">
+                                <a href="#" alt="Tumblr">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-tumblr"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="google">
+                                <a href="#" alt="Google Plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-google"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="dribbble">
+                                <a href="#" alt="Dribbble">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-dribbble"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="pinterest">
+                                <a href="#" alt="Pinterest">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-pinterest"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="reddit">
+                                <a href="#" alt="Reddit">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-reddit"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="skype">
+                                <a href="#" alt="Skype">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-skype"></use>
+                                </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div> <!-- / .social-icons -->
+                    
+                    <h3 class="subhead">Web Icons</h3>
+                    <div class="web-icons">
+                        <ul>
+                            <li class="share-arrow">
+                                <a href="#" alt="Share">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-share-arrow"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="right-arrow">
+                                <a href="#" alt="Right Arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-right-arrow"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="left-arrow">
+                                <a href="#" alt="Left Arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-left-arrow"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="down-arrow">
+                                <a href="#" alt="Down Arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-down-arrow"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="up-arrow">
+                                <a href="#" alt="Up Arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-up-arrow"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="close">
+                                <a href="#" alt="Close">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-close"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="check">
+                                <a href="#" alt="Checkmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-check"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="plus">
+                                <a href="#" alt="Plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-plus"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="minus">
+                                <a href="#" alt="Minus">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-minus"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="question">
+                                <a href="#" alt="Question">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-question"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="exclamation">
+                                <a href="#" alt="Warning">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-exclamation"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="info">
+                                <a href="#" alt="Information">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-info"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="upload">
+                                <a href="#" alt="Upload">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-upload"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="download">
+                                <a href="#" alt="Download">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-download"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="cloud">
+                                <a href="#" alt="Cloud Upload">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-cloud"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="avatar">
+                                <a href="#" alt="Avatar">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-avatar"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="vcard">
+                                <a href="#" alt="Vcard">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-vcard"></use>
+                                </svg>
+                                </a>
+                            </li>
+                            <li class="document">
+                                <a href="#" alt="document">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-document"></use>
+                                </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div> <!-- / .web-icons -->
+                    
+                </div> <!-- / .images -->
+    
             </div> <!-- / ,container -->
         </div> <!-- / #main -->

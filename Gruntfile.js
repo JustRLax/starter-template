@@ -10,7 +10,9 @@ module.exports = function(grunt) {
 		},
 		vendor: {
 			src: [
-				'js/vendor/underscore-min.js',
+				'js/vendor/avoid-console.js',
+				'js/vendor/jQuery.fontFlex.js',
+				'js/vendor/jquery.keep-ratio.js'
 			],
 			dest: 'js/plugins.js'
 		}
@@ -128,6 +130,7 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   grunt.registerTask('serve', ['shell:jekyllServe']);
-  grunt.registerTask('default', ['sass', 'autoprefixer', 'svgstore', 'imagemin', 'shell:jekyllBuild', 'watch']);
+  grunt.registerTask('build', 'concat');
+  grunt.registerTask('default', ['sass', 'autoprefixer', 'svgstore', /* 'imagemin', */ 'shell:jekyllBuild', 'watch']);
 
 };
