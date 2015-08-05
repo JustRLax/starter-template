@@ -592,7 +592,7 @@
     }
     li {
         display: inline-block;
-        margin: 0 5px;
+        margin: 0 5px 5px;
     }
     .share-arrow svg {
         height: 20px;
@@ -671,5 +671,59 @@
     .document svg {
         height: 20px;
         width: 15px;
+    }
+    .calendar svg {
+        height: 20px;
+        width: 19px;
+    }
+    .images svg {
+        height: 20px;
+        width: 21px;
+    }
+    .print svg {
+        height: 20px;
+        width: 21px;
+    }
+    .phone svg {
+        height: 20px;
+        width: 11px;
+    }
+    .desktop svg {
+        height: 20px;
+        width: 20px;
+    }
+    .tablet svg {
+        height: 20px;
+        width: 15px;
+    }
+    .link svg {
+        height: 20px;
+        width: 20px;
+    }
+    .write svg {
+        height: 20px;
+        width: 20px;
+    }
+    .settings svg {
+        height: 20px;
+        width: 20px;
+    }
+    .mail svg {
+        width: 22px;
+        height: 14px;
+        position: relative;
+        top: -3px;
+    }
+    .globe svg {
+        height: 20px;
+        width: 20px;
+    }
+    .pinpoint svg {
+        height: 20px;
+        width: 15px;
+    }
+    .magnify svg {
+        height: 20px;
+        width: 20px;
     }
 }
