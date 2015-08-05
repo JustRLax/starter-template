@@ -727,3 +727,127 @@
         width: 20px;
     }
 }
+
+/////////////////FORMS
+
+.forms {
+    float: left;
+    width: 100%;
+    form {
+        max-width: 100%;
+        width: 500px;
+        margin: 0 auto;
+        font-family: $font-1;
+    }
+    fieldset {
+        float: left;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    input[type=text],
+    input[type=email],
+    input[type=number] {
+        font-family: $font-1;
+        font-size: 1em;
+        display: block;
+        width: 100%;
+        float: left;
+        padding: 10px 20px;
+        outline: 0;
+        border-radius: 0;
+        appearance: none;
+        margin: 10px 0 0;
+        border: 1px solid #dddddd;
+        &:focus {
+            border-color: #00AEE2;
+        }
+    }
+    textarea {
+        font-family: $font-1;
+        font-size: 1em;
+        display: block;
+        width: 100%;
+        float: left;
+        padding: 10px 20px;
+        outline: 0;
+        resize: none;
+        border-radius: 0;
+        min-height: 200px;
+        appearance: none;
+        margin: 10px 0 0;
+        border: 1px solid #dddddd;
+        &:focus {
+            border-color: #00AEE2;
+        }
+    }
+    .select {
+        float: left;
+        width: 100%;
+    }
+    .select-container {
+        float: left;
+        border: 1px solid #dddddd;
+        margin-top: 10px;
+        position: relative;
+        z-index: 1;
+        padding-left: 10px;
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: 3;
+            width: 30px;
+            height: 100%;
+            right: 0;
+            top: 0;
+            background-color: #fff;
+            background-image: url(../fallbacks/png/dropdown.png);
+			background-image: linear-gradient(transparent, transparent), url(../img/svg/dropdown.svg);
+			background-position: center center;
+			background-size: cover;
+        }
+    }
+    select {
+        font-family: $font-1;
+        font-size: 1em;
+        max-width: 100%;
+        width: 300px;
+        height: 40px;
+        float: left;
+        border-radius: 0;
+        outline: 0;
+        appearance: none;
+        background: none;
+        border: none;
+        position: relative;
+        z-index: 2;
+        &:focus {
+            outline: 0;
+            border: none;
+        }
+    }
+    .checkbox, .radio {
+        label {
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+    }
+    #submit {
+        font-family: $font-1;
+        font-size: .875em;
+        display: block;
+        padding: 10px 30px;
+        outline: 0;
+        border-radius: 0;
+        appearance: none;
+        border: none;
+        color: #fff;
+        background: #00B2DF;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all .2s ease-in;
+        cursor: pointer;
+        &:hover {
+            background: #007BB7;
+        }
+    }
+}
