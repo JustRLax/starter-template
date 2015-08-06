@@ -12,4 +12,21 @@ $(document).ready(function() {
     
     //Keep Ratio
     $('.keep-ratio .image').keepRatio({ ratio: 800/400, calculate: 'height' });
+    
+    //Sliders
+    $(".three-up").owlCarousel({
+        navigationText: ['<svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-left-arrow"></use>
+                                </svg>','<svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="#shape-right-arrow"></use>
+                                </svg>'],
+        navigation: true,
+        pagination : true,
+        itemsCustom : [
+        [0, 1],
+        [500, 2],
+        [700, 3]
+      ],
+    });
+    
 });

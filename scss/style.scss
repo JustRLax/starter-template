@@ -93,6 +93,9 @@ svg {
 .hidden {
     display: none;
 }
+.transition {
+    transition: all .2s ease-in;
+}
 ///////////////Build Styles
 @import "patterns";
-
+@import "snippets";
