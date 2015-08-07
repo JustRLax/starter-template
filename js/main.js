@@ -35,6 +35,7 @@ $(document).ready(function() {
         singleItem: true,
         slideSpeed: 420
     });
+
     
     ////////////Custom Pager Slider    
     $('.pager-slider').bxSlider({
