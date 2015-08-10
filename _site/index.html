@@ -89,7 +89,7 @@
                     <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus sint incidunt quaerat reiciendis et quam perferendis eum expedita tempore architecto!</p>
                     <h4 class="h4">This is a heading 4</h4>
                     <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, laboriosam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aspernatur, optio, ratione, omnis et ullam sint iure illo quas tempore expedita eaque iste suscipit corporis cumque tenetur hic perspiciatis laborum?</p>
-                    <ol class="li">
+                    <ol class="ol">
                         <li>This is an ordered list item</li>
                         <li>This is an ordered list item</li>
                         <li>This is an ordered list item</li>
@@ -102,8 +102,8 @@
                     </blockquote>
                     <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, libero, deserunt eligendi in dolor hic blanditiis molestiae at! Atque, iste facere rem qui saepe commodi ab quod illo nesciunt necessitatibus. Ab, facere tempora deserunt quam laborum excepturi distinctio sit. Architecto, quidem dignissimos accusantium praesentium sequi possimus culpa molestiae reiciendis voluptatum.</p>
                     <h6 class="h6">This is a heading 6</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, id, laudantium, tempora, commodi hic maxime amet cumque natus saepe tempore eos reprehenderit autem fugit. Tempora, neque quidem perspiciatis alias ratione.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorum ex nam ipsa beatae aut laborum illum eum laudantium incidunt? Soluta, magni reiciendis voluptas voluptatibus quas ullam perspiciatis. Quidem nobis consequatur earum.</p>
+                    <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, id, laudantium, tempora, commodi hic maxime amet cumque natus saepe tempore eos reprehenderit autem fugit. Tempora, neque quidem perspiciatis alias ratione.</p>
+                    <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolorum ex nam ipsa beatae aut laborum illum eum laudantium incidunt? Soluta, magni reiciendis voluptas voluptatibus quas ullam perspiciatis. Quidem nobis consequatur earum.</p>
                     <div class="fitted">
                         <h3 class="subhead">Font Flex</h3>
                         <div class="font-flex">
@@ -728,19 +728,89 @@
      <!-- //////////////////Sliders -->
                 <h2 class="doc-subheading">Lightbox</h2> 
                 <h3 class="subhead">Magnific Popup</h3>
-                <h4 class="subhead">Single Image</h3>
+                <h4 class="subhead">Single Image</h4>
                 <div class="lightbox-container">
                     <a class="popup" href="img/image.png"><img src="http://placehold.it/500x300" alt="title"></a>
-                </div> <!-- / .lightbox -->
+                </div> <!-- / .lightbox-container -->
                 <div class="lightbox-container">
-                    <h4 class="subhead">Multiple Image Gallery</h3>
+                    <h4 class="subhead">Multiple Image Gallery</h4>
                     <ul class="gallery">
                         <li><a class="popup-gallery" href="img/image1.png"><img src="http://placehold.it/500x300" alt="title"></a></li>
                         <li><a class="popup-gallery" href="img/image2.png"><img src="http://placehold.it/500x300" alt="title"></a></li>
                         <li><a class="popup-gallery" href="img/image3.png"><img src="http://placehold.it/500x300" alt="title"></a></li>
                         <li><a class="popup-gallery" href="img/image4.png"><img src="http://placehold.it/500x300" alt="title"></a></li>
                     </ul>
-                </div> <!-- / .lightbox -->
+                </div> <!-- / .lightbox-container -->
+                <div class="lightbox-container">
+                    <h4 class="subhead">Iframe Videos</h4>
+                    <a class="popup-iframe" title="YouTube" href="https://www.youtube.com/watch?v=UYHWm0PbsdI"><img src="http://placehold.it/500x300" alt="title"></a>
+                    <a class="popup-iframe" title="Vimeo" href="https://vimeo.com/95626309"><img src="http://placehold.it/500x300" alt="title"></a>
+                </div> <!-- / .lightox-container -->
+                <div class="lightbox-container">
+                    <h4 class="subhead">Inline Content</h4>
+                    <a class="popup-inline" href="#showme"><img src="http://placehold.it/500x300" alt="title"></a>
+                    <div id="showme" class="mfp-hide">
+                        <h3 class="h3">Hello, I'm a popup</h3>
+                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, laborum, consequuntur veniam repellat totam veritatis molestias sapiente at maxime maiores.</p>
+                    </div> <!-- / #showme -->
+                </div> <!-- / .lightox-container -->
+                <div class="lightbox-container">
+                    <h4 class="subhead">AJAX</h4>
+                    <a class="popup-ajax" href="ajax.html"><img src="http://placehold.it/500x300" alt="title"></a>
+                </div> <!-- / .lightox-container -->
+                
+     <!-- //////////////////Toggles -->   
+                <h2 class="doc-subheading">Tabs</h2>
+                <div class="tabs">
+                    <nav role='navigation' class="nav-tabs">
+                        <ul>
+                            <li><a href="#tab-1">Tab 1</a></li>
+                            <li><a href="#tab-2" class="active">Tab 2</a></li>
+                            <li><a href="#tab-3">Tab 3</a></li>
+                            <li><a href="#tab-4">Tab 4</a></li>
+                            <li><a href="#tab-5">Tab 5</a></li>
+                            <li><a href="#tab-6">Tab 6</a></li>
+                        </ul>
+                    </nav> <!-- / .nav-tabs -->
+                    <div id="tab-1" class="tab-content">
+                        <h2 class="h2">Tab 1</h2>
+                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum non iure magnam dolores earum nemo quo tempora ab unde! Nesciunt ea iste impedit suscipit cupiditate quam earum explicabo quas veniam doloribus sed aut aliquam repellendus deleniti laudantium molestias fuga nihil quidem voluptatum atque sapiente perferendis facilis. Tempora mollitia odio?</p>
+                    </div> <!-- / #tab -->
+                    <div id="tab-2" class="active tab-content">
+                        <h2 class="h2">Tab 2</h2>
+                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur est natus esse minima nihil quidem tenetur alias pariatur. Obcaecati repudiandae temporibus provident sapiente iure doloribus praesentium voluptates dolores quia eos velit fugit cum ipsam. Deleniti fugiat maxime vel tempore illum esse illo fugit quam recusandae aut aperiam omnis at quaerat!</p>
+                    </div> <!-- / #tab -->
+                    <div id="tab-3" class="tab-content">
+                        <h2 class="h2">Tab 3</h2>
+                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam cupiditate aliquam quisquam repellendus fugit eaque asperiores voluptatem ut accusamus soluta corporis in facere quae provident itaque magni eum repellat ducimus dolore. Beatae aperiam accusamus at voluptatem ad sunt mollitia perspiciatis tempora numquam rerum aliquam deserunt illum necessitatibus nisi omnis.</p>
+                    </div> <!-- / #tab -->
+                    <div id="tab-4" class="tab-content">
+                        <h2 class="h2">Tab 4</h2>
+                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum non iure magnam dolores earum nemo quo tempora ab unde! Nesciunt ea iste impedit suscipit cupiditate quam earum explicabo quas veniam doloribus sed aut aliquam repellendus deleniti laudantium molestias fuga nihil quidem voluptatum atque sapiente perferendis facilis. Tempora mollitia odio?</p>
+                    </div> <!-- / #tab -->
+                    <div id="tab-5" class="tab-content">
+                        <h2 class="h2">Tab 5</h2>
+                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur est natus esse minima nihil quidem tenetur alias pariatur. Obcaecati repudiandae temporibus provident sapiente iure doloribus praesentium voluptates dolores quia eos velit fugit cum ipsam. Deleniti fugiat maxime vel tempore illum esse illo fugit quam recusandae aut aperiam omnis at quaerat!</p>
+                    </div> <!-- / #tab -->
+                    <div id="tab-6" class="tab-content">
+                        <h2 class="h2">Tab 6</h2>
+                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam cupiditate aliquam quisquam repellendus fugit eaque asperiores voluptatem ut accusamus soluta corporis in facere quae provident itaque magni eum repellat ducimus dolore. Beatae aperiam accusamus at voluptatem ad sunt mollitia perspiciatis tempora numquam rerum aliquam deserunt illum necessitatibus nisi omnis.</p>
+                    </div> <!-- / #tab -->
+                </div> <!-- / .tabs -->
+                
+                <div class="accordians">
+                    <h2 class="doc-subheading">Accordians</h2>
+                    <section class="accordian-container">
+                        <h2 class="h6 toggle">This is a toggle</h2>
+                        <article>
+                            <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, sed, iure, quidem, ut porro quaerat maiores necessitatibus dolores sapiente quibusdam aperiam odit labore animi earum minima libero expedita? Et, incidunt, doloribus, cumque eveniet quod soluta tempora nihil recusandae officia ipsam modi ea quas ad iure ex sunt nobis quam voluptatum.</p>
+                        </article>
+                        <h2 class="h6 toggle">This is another toggle</h2>
+                        <article>
+                            <p class="p">Lorem section ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, sed, iure, quidem, ut porro quaerat maiores necessitatibus dolores sapiente quibusdam aperiam odit labore animi earum minima libero expedita? Et, incidunt, doloribus, cumque eveniet quod soluta tempora nihil recusandae officia ipsam modi ea quas ad iure ex sunt nobis quam voluptatum.</p>
+                        </article>
+                    </section> <!-- / .accordian-container -->
+                </div> <!-- / .accordians -->
                 
                 
             </div> <!-- / .container -->

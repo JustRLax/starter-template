@@ -4,19 +4,19 @@
 }
 $base-font-size: 16px;
 
-@mixin max-wmq($size) {
+@mixin max-w($size) {
     @media only screen and (max-width: em($size)){@content;}
 }
 
-@mixin min-wmq($size) {
+@mixin min-w($size) {
     @media only screen and (min-width: em($size)){@content;}
 }
 
-@mixin max-hmq($size) {
+@mixin max-h($size) {
     @media only screen and (max-height: em($size)){@content;}
 }
 
-@mixin min-hmq($size) {
+@mixin min-h($size) {
     @media only screen and (min-height: em($size)){@content;}
 }
 

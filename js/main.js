@@ -1,3 +1,30 @@
+var Tabs = {
+  init: function() {
+    this.bindUIfunctions();
+    this.pageLoadCorrectTab();
+  },
+  bindUIfunctions: function() {
+    $(document)
+      .on("click", ".nav-tabs a[href^='#']:not('.active')", function(event) {
+        Tabs.changeTab(this.hash);
+        event.preventDefault();
+      })
+      .on("click", ".nav-tabs a.active", function(event) {
+        Tabs.toggleMobileMenu(event, this);
+        event.preventDefault();
+      });
+  },
+  changeTab: function(hash) {
+    var anchor = $("[href=" + hash + "]");
+    var div = $(hash);
+    anchor.addClass("active").parent().siblings().find("a").removeClass("active");
+    div.addClass("active").siblings().removeClass("active");
+    anchor.closest("ul").removeClass("open");
+  },
+  pageLoadCorrectTab: function() {
+    this.changeTab(document.location.hash);
+  }
+}
 $(document).ready(function() {
     //Prevent <a> Clicks
     $("a").on("click", function(event) {
@@ -14,7 +41,7 @@ $(document).ready(function() {
     $('.keep-ratio .image').keepRatio({ ratio: 800/400, calculate: 'height' });
     
     //Sliders
-    ////////////////Carousel
+    //*************Carousel
     $(".carousel").owlCarousel({
         navigationText: ['<svg xmlns="http://www.w3.org/2000/svg" class="icon"><use xlink:href="#shape-left-arrow"></use></svg>','<svg xmlns="http://www.w3.org/2000/svg" class="icon"><use xlink:href="#shape-right-arrow"></use></svg>'],
         navigation: true,
@@ -27,7 +54,7 @@ $(document).ready(function() {
       ],
     });
     
-    /////////////Single Slider
+    //*************Single Slider
     $(".single-contained").owlCarousel({
         navigationText: ['<svg xmlns="http://www.w3.org/2000/svg" class="icon"><use xlink:href="#shape-left-arrow"></use></svg>','<svg xmlns="http://www.w3.org/2000/svg" class="icon"><use xlink:href="#shape-right-arrow"></use></svg>'],
         navigation: true,
@@ -37,7 +64,7 @@ $(document).ready(function() {
     });
 
     
-    ////////////Custom Pager Slider    
+    //*************Custom Pager Slider    
     $('.pager-slider').bxSlider({
         pagerCustom: '.custom-pager',
         slideSpeed: 420,
@@ -46,17 +73,45 @@ $(document).ready(function() {
     });
     
     //Lightboxes
-    /////////////////Single lightbox
+    //*************Single lightbox
     $('.popup').magnificPopup({ 
-      type: 'image',
-      removalDelay: 700
+        type: 'image',
+        removalDelay: 700
     });
-    /////////////////Gallery lightbox
+    //*************Gallery lightbox
     $('.popup-gallery').magnificPopup({ 
-      type: 'image',
-      gallery:{enabled:true},
-      removalDelay: 700
+        type: 'image',
+        gallery:{enabled:true},
+        removalDelay: 700
     });
     
+    //*************Iframe lightbox
+    $('.popup-iframe').magnificPopup({ 
+        type: 'iframe',
+        removalDelay: 700
+    });
+    
+    //*************Inline lightbox
+    $('.popup-inline').magnificPopup({ 
+        type: 'inline',
+        removalDelay: 700,
+        closeBtnInside: true
+    });
+    
+    //*************AJAX lightbox
+    $('.popup-ajax').magnificPopup({ 
+        type: 'ajax',
+        removalDelay: 700,
+        closeBtnInside: true
+    });
+    
+    //Accordians
+    $(".accordian-container .toggle").on("click", function(event) {
+		$(this).toggleClass("active");
+		$(this).next("article").slideToggle(420);
+	});
+    
+    //Tabs
+    Tabs.init();
     
 });

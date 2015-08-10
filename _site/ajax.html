@@ -1,8 +1,67 @@
----
-layout: default
-title: Home Page
----
-        <div id="main">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>
+			
+				Ajax Page
+			
+		</title>
+		<script src="//localhost:35729/livereload.js"></script>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script>
+        // Test from Modernizr
+        var supportsSvg = function() {
+          var div = document.createElement('div');
+          div.innerHTML = '<svg/>';
+          return (div.firstChild && div.firstChild.namespaceURI) == 'http://www.w3.org/2000/svg';
+        };
+        if (!supportsSvg()) {
+          (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+          // Note the empty first item in the array. Don't do anything if supported.
+          grunticon(["", "/fallbacks/icons.data.png.css", "/fallbacks/icons.fallback.css"]);
+        } else {
+          // Inline SVG is supported so Ajax for the sprite.
+          var ajax = new XMLHttpRequest();
+          ajax.open("GET", "svg-defs.svg", true);
+          ajax.send();
+          ajax.onload = function(e) {
+            var div = document.createElement("div");
+            div.innerHTML = ajax.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+          }
+        }
+      </script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <header>
+	    <!--
+<nav>
+    <ul>
+        <li><a href="#">Nav Link 1</a></li>
+        <li><a href="#">Nav Link 2</a></li>
+        <li><a href="#">Nav Link 3</a></li>
+        <li><a href="#">Nav Link 4</a></li>
+    </ul>
+</nav>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                <use xlink:href="#shape-bike"></use>
+            </svg>
+-->    
+    </header>
+    
+            <div id="main">
             <div class="container">
                 <h1 class="doc-heading">Starter Template Patterns</h1>
     <!-- //////////////////COLORS -->
@@ -699,60 +758,24 @@ title: Home Page
                     <h4 class="subhead">AJAX</h4>
                     <a class="popup-ajax" href="ajax.html"><img src="http://placehold.it/500x300" alt="title"></a>
                 </div> <!-- / .lightox-container -->
-                
-     <!-- //////////////////Toggles -->   
-                <h2 class="doc-subheading">Tabs</h2>
-                <div class="tabs">
-                    <nav role='navigation' class="nav-tabs">
-                        <ul>
-                            <li><a href="#tab-1">Tab 1</a></li>
-                            <li><a href="#tab-2" class="active">Tab 2</a></li>
-                            <li><a href="#tab-3">Tab 3</a></li>
-                            <li><a href="#tab-4">Tab 4</a></li>
-                            <li><a href="#tab-5">Tab 5</a></li>
-                            <li><a href="#tab-6">Tab 6</a></li>
-                        </ul>
-                    </nav> <!-- / .nav-tabs -->
-                    <div id="tab-1" class="tab-content">
-                        <h2 class="h2">Tab 1</h2>
-                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum non iure magnam dolores earum nemo quo tempora ab unde! Nesciunt ea iste impedit suscipit cupiditate quam earum explicabo quas veniam doloribus sed aut aliquam repellendus deleniti laudantium molestias fuga nihil quidem voluptatum atque sapiente perferendis facilis. Tempora mollitia odio?</p>
-                    </div> <!-- / #tab -->
-                    <div id="tab-2" class="active tab-content">
-                        <h2 class="h2">Tab 2</h2>
-                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur est natus esse minima nihil quidem tenetur alias pariatur. Obcaecati repudiandae temporibus provident sapiente iure doloribus praesentium voluptates dolores quia eos velit fugit cum ipsam. Deleniti fugiat maxime vel tempore illum esse illo fugit quam recusandae aut aperiam omnis at quaerat!</p>
-                    </div> <!-- / #tab -->
-                    <div id="tab-3" class="tab-content">
-                        <h2 class="h2">Tab 3</h2>
-                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam cupiditate aliquam quisquam repellendus fugit eaque asperiores voluptatem ut accusamus soluta corporis in facere quae provident itaque magni eum repellat ducimus dolore. Beatae aperiam accusamus at voluptatem ad sunt mollitia perspiciatis tempora numquam rerum aliquam deserunt illum necessitatibus nisi omnis.</p>
-                    </div> <!-- / #tab -->
-                    <div id="tab-4" class="tab-content">
-                        <h2 class="h2">Tab 4</h2>
-                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum non iure magnam dolores earum nemo quo tempora ab unde! Nesciunt ea iste impedit suscipit cupiditate quam earum explicabo quas veniam doloribus sed aut aliquam repellendus deleniti laudantium molestias fuga nihil quidem voluptatum atque sapiente perferendis facilis. Tempora mollitia odio?</p>
-                    </div> <!-- / #tab -->
-                    <div id="tab-5" class="tab-content">
-                        <h2 class="h2">Tab 5</h2>
-                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur est natus esse minima nihil quidem tenetur alias pariatur. Obcaecati repudiandae temporibus provident sapiente iure doloribus praesentium voluptates dolores quia eos velit fugit cum ipsam. Deleniti fugiat maxime vel tempore illum esse illo fugit quam recusandae aut aperiam omnis at quaerat!</p>
-                    </div> <!-- / #tab -->
-                    <div id="tab-6" class="tab-content">
-                        <h2 class="h2">Tab 6</h2>
-                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam cupiditate aliquam quisquam repellendus fugit eaque asperiores voluptatem ut accusamus soluta corporis in facere quae provident itaque magni eum repellat ducimus dolore. Beatae aperiam accusamus at voluptatem ad sunt mollitia perspiciatis tempora numquam rerum aliquam deserunt illum necessitatibus nisi omnis.</p>
-                    </div> <!-- / #tab -->
-                </div> <!-- / .tabs -->
-                
-                <div class="accordians">
-                    <h2 class="doc-subheading">Accordians</h2>
-                    <section class="accordian-container">
-                        <h2 class="h6 toggle">This is a toggle</h2>
-                        <article>
-                            <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, sed, iure, quidem, ut porro quaerat maiores necessitatibus dolores sapiente quibusdam aperiam odit labore animi earum minima libero expedita? Et, incidunt, doloribus, cumque eveniet quod soluta tempora nihil recusandae officia ipsam modi ea quas ad iure ex sunt nobis quam voluptatum.</p>
-                        </article>
-                        <h2 class="h6 toggle">This is another toggle</h2>
-                        <article>
-                            <p class="p">Lorem section ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, sed, iure, quidem, ut porro quaerat maiores necessitatibus dolores sapiente quibusdam aperiam odit labore animi earum minima libero expedita? Et, incidunt, doloribus, cumque eveniet quod soluta tempora nihil recusandae officia ipsam modi ea quas ad iure ex sunt nobis quam voluptatum.</p>
-                        </article>
-                    </section> <!-- / .accordian-container -->
-                </div> <!-- / .accordians -->
-                
-                
             </div> <!-- / .container -->
         </div> <!-- / #main -->
+    
+    <footer>
+	    
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/plugins.min.js"></script>
+        <script src="js/main.min.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
