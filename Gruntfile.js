@@ -14,7 +14,8 @@ module.exports = function(grunt) {
 				'js/vendor/jQuery.fontFlex.js',
 				'js/vendor/jquery.keep-ratio.js',
 				'js/vendor/owl.carousel.js',
-				'js/vendor/jquery.bxslider.js'
+				'js/vendor/jquery.bxslider.js',
+				'js/vendor/magnific.js'
 			],
 			dest: 'js/plugins.js'
 		}

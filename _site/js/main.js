@@ -45,4 +45,18 @@ $(document).ready(function() {
         nextText: '<svg xmlns="http://www.w3.org/2000/svg" class="icon"><use xlink:href="#shape-right-arrow"></use></svg>'
     });
     
+    //Lightboxes
+    /////////////////Single lightbox
+    $('.popup').magnificPopup({ 
+      type: 'image',
+      removalDelay: 700
+    });
+    /////////////////Gallery lightbox
+    $('.popup-gallery').magnificPopup({ 
+      type: 'image',
+      gallery:{enabled:true},
+      removalDelay: 700
+    });
+    
+    
 });
