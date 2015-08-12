@@ -25,17 +25,18 @@ var Tabs = {
     this.changeTab(document.location.hash);
   }
 }
+
+// Font Flex
+$(function() {
+  $('.font-flex h2').fontFlex(32, 70, 10); 
+  $('.font-flex p').fontFlex(16, 32, 30); 
+});
+
 $(document).ready(function() {
     //Prevent <a> Clicks
     $("a").on("click", function(event) {
 		event.preventDefault();
 	});
-	
-	// Font Flex
-	$(function() {
-      $('.font-flex h2').fontFlex(32, 70, 10); 
-      $('.font-flex p').fontFlex(16, 32, 30); 
-    });
     
     //Keep Ratio
     $('.keep-ratio .image').keepRatio({ ratio: 800/400, calculate: 'height' });
@@ -106,12 +107,30 @@ $(document).ready(function() {
     });
     
     //Accordians
-    $(".accordian-container .toggle").on("click", function(event) {
+    $(".accordion-container .toggle").on("click", function(event) {
 		$(this).toggleClass("active");
 		$(this).next("article").slideToggle(420);
 	});
+	
+	//Navigations
+    $(".nav .menu").on("click", function(event) {
+		$(this).toggleClass("active");
+		$(this).next("nav").slideToggle(420);
+	});
+	$(".with-sub .show-sub").on("click", function(event) {
+        $(this).toggleClass("active");
+        $(this).next().next("ul").slideToggle(420);
+    	});
+    	$(window).resize(function(){
+	var width = $(window).width();
+		if(width >= 300 && width <= 780){
+			$(".nav nav").attr( "style", "" );
+			$(".nav ul").attr( "style", "" );
+		}
+	}).resize();
+    	
     
     //Tabs
-    Tabs.init();
+    Tabs.init(); 
     
 });

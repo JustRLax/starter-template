@@ -81,14 +81,14 @@
     margin-top: 8px;
 }
 .p.intro {
-    font-size: 1.5em;
+    font-size: 1.25em;
     line-height: 150%;
 }
 .p.intro:first-letter {
     float: left;
     font-weight: 700;
     font-size: 3.25em;
-    line-height: 46px;
+    line-height: 58px;
     padding: 0 5px 0px 0;
 }
 .p {
@@ -136,6 +136,7 @@ li {
 .fitted {
     width: 100%;
     float: left;
+    padding-bottom: 60px;
     font-family: $font-1;
     .font-flex {
         h2 {
@@ -1258,7 +1259,7 @@ li {
         }
     }
 }
-.accordians {
+.accordions {
     float: left;
     width: 100%;
     padding: 0 0 60px;
@@ -1282,3 +1283,228 @@ li {
     }
 }
 
+////////////////NAVIGATIONS
+.navigations {
+    float: left;
+    width: 100%;
+    padding: 0px 0 360px;
+}
+.nav {
+    float: left;
+    width: 100%;
+    background: #000;
+    padding: 10px 0 0;
+    position: relative;
+    z-index: 100;
+    @include max-w(560px) {
+        .container {
+            padding: 0;
+        }
+    }
+    .logo {
+        float: left;
+        width: 100px;
+        max-width: 100%;
+        svg {
+            height: 100px;
+        }
+        @include max-w(740px) {
+            float: none;
+            margin: 0 auto;
+        }
+        @include max-w(560px) {
+            float: left;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            width: 50px;
+            svg {
+                height: 50px;
+            }
+        }
+    }
+    .menu {
+        display: none;
+        @extend .transition;
+        @include max-w(560px) {
+            display: block;
+            float: right;
+            text-indent: -9999em;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50px;
+            height: 100%;
+            max-height: 72px;
+            background: #CE353D;
+            cursor: pointer;
+            padding: 10px;
+            &:hover {
+                background: #E85242;
+            }
+            span {
+                display: block;
+                background: #fff;
+                height: 4px;
+                width: 100%;
+                position: relative;
+                top: 14px;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 8px;
+                    display: block;
+                    background: #fff;
+                    height: 4px;
+                    width: 100%;
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 16px;
+                    display: block;
+                    background: #fff;
+                    height: 4px;
+                    width: 100%;
+                }
+            }
+            
+        }
+    }
+    nav {
+        float: right;
+        .show-sub {display: none;}
+        @include max-w(740px) {
+            width: 100%;
+            text-align: center;
+        }
+        @include max-w(560px) {
+            display: none;
+            text-align: left;
+            border-top: 1px solid #fff;
+        }
+        > ul {
+            margin-top: 50px;
+            @include max-w(740px) {
+                margin-top: 10px;
+                padding-top: 20px;
+                border-top: 1px solid #fff;
+            }
+            @include max-w(560px) {
+                border: none;
+                margin: 0;
+                padding: 0;
+            }
+            > li {
+                float: left;
+                margin-left: 40px;
+                @include max-w(740px) {
+                    float: none;
+                    display: inline-block;
+                    margin: 0 10px;
+                }
+                @include max-w(560px) {
+                    width: 100%;
+                    float: left;
+                    margin: 0;
+                    border: none;
+                    &.with-sub {
+                        position: relative;
+                    }
+                    .show-sub {
+                        display: block;
+                        width: 30px;
+                        height: 100%;
+                        background: #3C3C3C;
+                        position: absolute;
+                        z-index: 100;
+                        left: 0;
+                        cursor: pointer;
+                        &:after {
+                            content: '+';
+                            position: absolute;
+                            text-align: center;
+                            font-family: $font-1;
+                            font-size: 30px;
+                            width: 100%;
+                            left: 0;
+                            top: 50%;
+                            margin-top: -15px;
+                            color: #000;
+                        }
+                    }
+                    ul {
+                        padding-left: 20px;
+                        display: none;
+                    }
+                }
+                @include min-w(559px) {
+                    &.with-sub {
+                        padding-right: 20px;
+                        position: relative;
+                        border-bottom: 30px solid transparent;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            right: 0;
+                            top: 8px;
+                            width: 0;
+                            height: 0;
+                            border-left: 5px solid transparent;
+                            border-right: 5px solid transparent;
+                            border-top: 8px solid #fff;
+                        }
+                        &:hover {
+                            &:after {
+                                border-top: 8px solid #E74F40;
+                            }
+                            >a {
+                                color: #E74F40;
+                            }
+                            ul {
+                                display: block;
+                                position: absolute;
+                                width: 300px;
+                                left: -10px;
+                                top: 55px;
+                                text-align: left;
+                            }
+                        }
+                    }
+                    li {
+                        width: 100%;
+                        border: 1px solid #000;
+                        margin-bottom: -1px;
+                        a {
+                            padding: 10px;
+                            display: block;
+                            color: #000;
+                            background: #fff;
+                            &:hover {
+                                color: #E74F40;
+                            }
+                        }
+                    }
+                }
+                ul {
+                    display: none;
+                    @include animated(.2s);
+                    @include fadeInDown;
+                }
+            }
+        }
+        a {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 1.25em;
+            @include max-w(560px) {
+                padding: 10px 40px;
+                width: 100%;
+                float: left;
+                border-bottom: 1px solid #383838;
+            }
+            &:hover {
+                color: #E74F40;
+            }
+        }
+    }
+}

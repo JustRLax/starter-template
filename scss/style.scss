@@ -38,6 +38,7 @@ $teal: #0B5663;
 
 /////////ANIMATIONS
 @include setup-fadeIn;
+@include setup-fadeInDown;
 @include setup-fadeOut;
 @include setup-puffIn;
 @include setup-puffOut;
