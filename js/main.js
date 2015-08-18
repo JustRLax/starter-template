@@ -113,7 +113,9 @@ $(document).ready(function() {
 	});
 	
 	//Navigations
-    $(".nav .menu").on("click", function(event) {
+	
+	//Inline to mobile button
+    $(".nav.inline .menu").on("click", function(event) {
 		$(this).toggleClass("active");
 		$(this).next("nav").slideToggle(420);
 	});
@@ -121,9 +123,24 @@ $(document).ready(function() {
         $(this).toggleClass("active");
         $(this).next().next("ul").slideToggle(420);
     	});
+    	$(".nav.inline-contained .menu").on("click", function(event) {
+		$(this).toggleClass("active");
+		$(this).next(".site-nav").slideToggle(420);
+	});
+	$(".nav.fullscreen-overlay .menu").on("click", function(event) {
+		$(this).addClass("active");
+		$("nav.overlay").addClass("active").prepend('<span class="close">X</span>');
+		$("nav.overlay .close").on("click", function(event) {
+        	    $(".nav.fullscreen-overlay .menu").removeClass("active");
+        	    $("nav.overlay").removeClass("active");
+        	    $(this).remove();
+        	});
+	});
+    	
     	$(window).resize(function(){
 	var width = $(window).width();
 		if(width >= 300 && width <= 780){
+			$(".site-nav").attr( "style", "" );
 			$(".nav nav").attr( "style", "" );
 			$(".nav ul").attr( "style", "" );
 		}
