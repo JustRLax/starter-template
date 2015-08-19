@@ -119,14 +119,30 @@ $(document).ready(function() {
 		$(this).toggleClass("active");
 		$(this).next("nav").slideToggle(420);
 	});
+	
+	//Dropdown button
 	$(".with-sub .show-sub").on("click", function(event) {
         $(this).toggleClass("active");
         $(this).next().next("ul").slideToggle(420);
     	});
+    	
+    	//Inline Contained to Mobile Button
     	$(".nav.inline-contained .menu").on("click", function(event) {
 		$(this).toggleClass("active");
 		$(this).next(".site-nav").slideToggle(420);
 	});
+	
+	
+	$(window).resize(function(){
+        var width = $(window).width();
+		if(width >= 300 && width <= 780){
+			$(".site-nav").attr( "style", "" );
+			$(".nav nav").attr( "style", "" );
+			$(".nav ul").attr( "style", "" );
+		}
+	}).resize();
+	
+	//Fullscreen Overlay
 	$(".nav.fullscreen-overlay .menu").on("click", function(event) {
 		$(this).addClass("active");
 		$("nav.overlay").addClass("active").prepend('<span class="close">X</span>');
@@ -136,15 +152,22 @@ $(document).ready(function() {
         	    $(this).remove();
         	});
 	});
-    	
-    	$(window).resize(function(){
-	var width = $(window).width();
-		if(width >= 300 && width <= 780){
-			$(".site-nav").attr( "style", "" );
-			$(".nav nav").attr( "style", "" );
-			$(".nav ul").attr( "style", "" );
-		}
-	}).resize();
+	
+	//Off Canvas Nav
+	$(".nav.off-canvas .menu").on("click", function(event) {
+		$(this).toggleClass("active");
+		$(".off-canvas-body").toggleClass("active");
+	});
+	$(".with-sub .show-subpages").on("click", function(event) {
+		$(this).toggleClass("active");
+		$("ul.subpages").toggleClass("active");
+	});
+	
+	//Side Nav
+    $(".side-off-canvas .menu").on("click", function(event) {
+		$(this).toggleClass("active");
+		$(".side-nav-body").toggleClass("active");
+	});
     	
     
     //Tabs

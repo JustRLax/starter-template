@@ -64,12 +64,12 @@
             <div id="main">
             <div class="container">
                 <h1 class="doc-heading">Starter Template Patterns</h1>
-    <!-- //////////////////COLORS -->
+    <!-- //////////////////Typography -->
                 <h2 class="doc-subheading">Typography</h2>
                 <h3 class="subhead">Fonts</h3>
                 <ul class="font-list">
                     <li><strong>Font 1: </strong>'Futura' , 'Helvetica Neue', 'Helvetica', sans-serif;</li>
-                    <li><strong>Font 2: </strong>'Helvetica Neue', 'Helvetica', sans-serif;</li>
+                    <li class="font2"><strong>Font 2: </strong>'Helvetica Neue', 'Helvetica', sans-serif;</li>
                 </ul> <!-- / .font-list -->
                 <h3 class="subhead">Content</h3>
                 <section class="typography">
@@ -163,8 +163,213 @@
                         <li style="border-color: #FE3D39">#FE3D39</li>
                     </ul>
                 </div> <!-- / .colors -->
+            </div> <!-- / .container -->  
+    <!-- //////////////////Navigations -->   
+            <h2 class="doc-subheading">Navigation</h2>
+            <h3 class="subhead">Inline to mobile button</h3>
+            <div class="navigations">
+                <div class="nav inline">
+                    <div class="container">
+                        <div class="logo" itemscope itemtype="http://schema.org/Organization">
+                            <a itemprop="url" href="http://www.example.com/">
+                                <span itemprop="name" class="hidden">Company Name</span>
+                                <span itemprop="logo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <use xlink:href="#shape-logo"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div> <!-- / .logo -->
+                        <span class="menu"><span></span></span>
+                        <nav>
+                            <ul>
+                                <li class="with-sub">
+                                    <span class="show-sub"></span>
+                                    <a href="#">Services</a>
+                                    <ul>
+                                        <li><a href="#">Strategy</a></li>
+                                        <li><a href="#">Design</a></li>
+                                        <li><a href="#">Illustration</a></li>
+                                        <li><a href="#">Branding</a></li>
+                                        <li><a href="#">Development</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Work</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div> <!-- / .nav -->
+                </div> <!-- / .container -->
+                <div class="container">
+                    <h3 class="subhead">Contained Inline to mobile button with search</h3>
+                    <div class="nav inline-contained">
+                        <div class="logo" itemscope itemtype="http://schema.org/Organization">
+                            <a itemprop="url" href="http://www.example.com/">
+                                <span itemprop="name" class="hidden">Company Name</span>
+                                <span itemprop="logo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <use xlink:href="#shape-logo"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div> <!-- / .logo -->
+                        <span class="menu"><span></span></span>
+                        <div class="site-nav">
+                            <form action="#" class="search-form">
+                                <fieldset class="search">
+                                    <input type="search" id="search">
+                                    <input type="submit" id="search-submit" value="search">
+                                </fieldset>
+                            </form>
+                            <nav>
+                                <ul>
+                                    <li class="with-sub">
+                                        <span class="show-sub"></span>
+                                        <a href="#">Services</a>
+                                        <ul>
+                                            <li><a href="#">Strategy</a></li>
+                                            <li><a href="#">Design</a></li>
+                                            <li><a href="#">Illustration</a></li>
+                                            <li><a href="#">Branding</a></li>
+                                            <li><a href="#">Development</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Work</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div> <!-- / .site-nav -->
+                    </div> <!-- / .inline-contained -->
+                </div> <!-- / .container -->
                 
+                
+                <h3 class="subhead">Full Screen Overlay Button</h3>
+                <div class="nav fullscreen-overlay">
+                    <nav class="overlay">
+                        <ul>
+                            <li class="with-sub">
+                                <span class="show-sub"></span>
+                                <a href="#">Services</a>
+                                <ul>
+                                    <li><a href="#">Strategy</a></li>
+                                    <li><a href="#">Design</a></li>
+                                    <li><a href="#">Illustration</a></li>
+                                    <li><a href="#">Branding</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Work</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="container">
+                        <div class="logo" itemscope itemtype="http://schema.org/Organization">
+                            <a itemprop="url" href="http://www.example.com/">
+                                <span itemprop="name" class="hidden">Company Name</span>
+                                <span itemprop="logo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <use xlink:href="#shape-logo"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div> <!-- / .logo -->
+                        <span class="menu"><span></span></span>
+                    </div> <!-- / .container -->
+                </div> <!-- / .nav -->
+                
+                <h3 class="subhead">Off Canvas Nav with Button</h3>
+                
+                <div class="off-canvas-body">
+                    <div class="nav off-canvas">
+                        <div class="container">
+                            <div class="logo" itemscope itemtype="http://schema.org/Organization">
+                                <a itemprop="url" href="http://www.example.com/">
+                                    <span itemprop="name" class="hidden">Company Name</span>
+                                    <span itemprop="logo">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                            <use xlink:href="#shape-logo"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div> <!-- / .logo -->
+                            <span class="menu"><span></span></span>
+                        </div> <!-- / .container -->
+                    </div> <!-- / .nav -->
+                    <nav class="main-nav">
+                        <ul>
+                            <li class="with-sub">
+                                <span class="show-subpages"></span>
+                                <a href="#">Services</a>
+                            </li>
+                            <li><a href="#">Work</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                        <ul class="subpages">
+                            <li><a href="#">Strategy</a></li>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Illustration</a></li>
+                            <li><a href="#">Branding</a></li>
+                            <li><a href="#">Development</a></li>
+                        </ul>
+                    </nav>
+                    <div class="main-content">
+                        <section class="container">
+                            <h1 class="h2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, neque.</h1>
+                            <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, consequuntur, illo fuga amet eos vero aliquid velit obcaecati perspiciatis voluptate rerum animi beatae cupiditate corporis nobis laboriosam alias! Nisi, cum nam sint aliquam molestias sapiente assumenda velit iste laudantium itaque sit temporibus quidem hic amet magni mollitia quos dolores illum.</p>
+                            <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, fugiat, corporis, officia quidem dolorum molestiae reiciendis veritatis cumque molestias accusamus a blanditiis dolore rerum. Est, aliquam ducimus nam quia dolores eos eveniet! Veritatis, molestiae, quibsciunt ex e repellat cupiditate eos iure amet saepe accusantium voluptate exercitationem ipsam omnis fuga qui similique? Quia, perferendis, reprehenderit nisi est harum esse adipisci unde velit blanditiis recusandae ab officiis exercitationem vero aliquid officia iste nesciunt voluptatibus quos. Tempora, maiores, error, quia quo perspiciatis praesentium porro sapiente alias iure ipsa animi incidunt quibusdam quas sunt temporibus obcaecati modi fugiat doloremque consequatur nulla molestias laborum assumenda magnam cum vero quaerat ab officia labore ipsam aut iste beatae eaque repellat itaque culpa nisi suscipit perferendis quisquam nesciunt dignissimos. Aliquam voluptates voluptate provident laudantium modi neque quis error.</p>
+                        </section>
+                    </div> <!-- / .main-content -->
+                </div> <!-- / .off-canvas-body -->
+                
+                <h3 class="subhead">Side Nav to off canvas nav</h3>
+                <div class="side-nav-body">
+                    <div class="nav side-off-canvas">
+                        <div class="logo" itemscope itemtype="http://schema.org/Organization">
+                            <a itemprop="url" href="http://www.example.com/">
+                                <span itemprop="name" class="hidden">Company Name</span>
+                                <span itemprop="logo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <use xlink:href="#shape-logo"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div> <!-- / .logo -->
+                        <nav class="main-nav">
+                            <ul>
+                                <li class="with-sub">
+                                    <span class="show-sub"></span>
+                                    <a href="#">Services</a>
+                                    <ul>
+                                        <li><a href="#">Strategy</a></li>
+                                        <li><a href="#">Design</a></li>
+                                        <li><a href="#">Illustration</a></li>
+                                        <li><a href="#">Branding</a></li>
+                                        <li><a href="#">Development</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Work</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <span class="menu"><span></span></span>
+                    </div> <!-- / .nav -->
+                    <div class="main-content">
+                        <section class="container">
+                            <h1 class="h2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, neque.</h1>
+                            <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, consequuntur, illo fuga amet eos vero aliquid velit obcaecati perspiciatis voluptate rerum animi beatae cupiditate corporis nobis laboriosam alias! Nisi, cum nam sint aliquam molestias sapiente assumenda velit iste laudantium itaque sit temporibus quidem hic amet magni mollitia quos dolores illum.</p>
+                            <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, fugiat, corporis, officia quidem dolorum molestiae reiciendis veritatis cumque molestias accusamus a blanditiis dolore rerum. Est, aliquam ducimus nam quia dolores eos eveniet! Veritatis, molestiae, quibsciunt ex e repellat cupiditate eos iure amet saepe accusantium voluptate exercitationem ipsam omnis fuga qui similique? Quia, perferendis, reprehenderit nisi est harum esse adipisci unde velit blanditiis recusandae ab officiis exercitationem vero aliquid officia iste nesciunt voluptatibus quos. Tempora, maiores, error, quia quo perspiciatis praesentium porro sapiente alias iure ipsa animi incidunt quibusdam quas sunt temporibus obcaecati modi fugiat doloremque consequatur nulla molestias laborum assumenda magnam cum vero quaerat ab officia labore ipsam aut iste beatae eaque repellat itaque culpa nisi suscipit perferendis quisquam nesciunt dignissimos. Aliquam voluptates voluptate provident laudantium modi neque quis error.</p>
+                        </section>
+                    </div> <!-- / .main-content -->
+                </div> <!-- / .off-canvas-body -->
+            </div> <!-- / .navigations -->
+                 
     <!-- //////////////////GRID LAYOUT -->
+            <div class="container">
                 <h2 class="doc-subheading">Grid Layout</h2>
                 <div class="layout">
                     
@@ -811,143 +1016,8 @@
                         </article>
                     </section> <!-- / .accordian-container -->
                 </div> <!-- / .accordians -->
-                                
-     <!-- //////////////////Navigations -->   
-                <h2 class="doc-subheading">Navigation</h2>
-                <h3 class="subhead">Inline to mobile button</h3>
             </div> <!-- / .container -->
-            <div class="navigations">
-                <div class="nav inline">
-                    <div class="container">
-                        <div class="logo" itemscope itemtype="http://schema.org/Organization">
-                            <a itemprop="url" href="http://www.example.com/">
-                                <span itemprop="name" class="hidden">Company Name</span>
-                                <span itemprop="logo">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
-                                        <use xlink:href="#shape-logo"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </div> <!-- / .logo -->
-                        <span class="menu"><span></span></span>
-                        <nav>
-                            <ul>
-                                <li class="with-sub">
-                                    <span class="show-sub"></span>
-                                    <a href="#">Services</a>
-                                    <ul>
-                                        <li><a href="#">Strategy</a></li>
-                                        <li><a href="#">Design</a></li>
-                                        <li><a href="#">Illustration</a></li>
-                                        <li><a href="#">Branding</a></li>
-                                        <li><a href="#">Development</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Work</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div> <!-- / .nav -->
-                </div> <!-- / .container -->
-                <div class="container">
-                    <h3 class="subhead">Contained Inline to mobile button with search</h3>
-                    <div class="nav inline-contained">
-                        <div class="logo" itemscope itemtype="http://schema.org/Organization">
-                            <a itemprop="url" href="http://www.example.com/">
-                                <span itemprop="name" class="hidden">Company Name</span>
-                                <span itemprop="logo">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
-                                        <use xlink:href="#shape-logo"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </div> <!-- / .logo -->
-                        <span class="menu"><span></span></span>
-                        <div class="site-nav">
-                            <form action="#" class="search-form">
-                                <fieldset class="search">
-                                    <input type="search" id="search">
-                                    <input type="submit" id="search-submit" value="search">
-                                </fieldset>
-                            </form>
-                            <nav>
-                                <ul>
-                                    <li class="with-sub">
-                                        <span class="show-sub"></span>
-                                        <a href="#">Services</a>
-                                        <ul>
-                                            <li><a href="#">Strategy</a></li>
-                                            <li><a href="#">Design</a></li>
-                                            <li><a href="#">Illustration</a></li>
-                                            <li><a href="#">Branding</a></li>
-                                            <li><a href="#">Development</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Work</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div> <!-- / .site-nav -->
-                    </div> <!-- / .inline-contained -->
-                </div> <!-- / .container -->
-                
-                
-                <h3 class="subhead">Full Screen Overlay Button</h3>
-                <div class="nav fullscreen-overlay">
-                    <nav class="overlay">
-                        <ul>
-                            <li class="with-sub">
-                                <span class="show-sub"></span>
-                                <a href="#">Services</a>
-                                <ul>
-                                    <li><a href="#">Strategy</a></li>
-                                    <li><a href="#">Design</a></li>
-                                    <li><a href="#">Illustration</a></li>
-                                    <li><a href="#">Branding</a></li>
-                                    <li><a href="#">Development</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Work</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                    <div class="container">
-                        <div class="logo" itemscope itemtype="http://schema.org/Organization">
-                            <a itemprop="url" href="http://www.example.com/">
-                                <span itemprop="name" class="hidden">Company Name</span>
-                                <span itemprop="logo">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
-                                        <use xlink:href="#shape-logo"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </div> <!-- / .logo -->
-                        <span class="menu"><span></span></span>
-                    </div> <!-- / .container -->
-                </div> <!-- / .nav -->
-                
-                <h3 class="subhead">Off Canvas Nav with Button</h3>
-                <div class="nav off-canvas">
-                    <div class="container">
-                        <div class="logo" itemscope itemtype="http://schema.org/Organization">
-                            <a itemprop="url" href="http://www.example.com/">
-                                <span itemprop="name" class="hidden">Company Name</span>
-                                <span itemprop="logo">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
-                                        <use xlink:href="#shape-logo"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </div> <!-- / .logo -->
-                        <span class="menu"><span></span></span>
-                    </div> <!-- / .container -->
-                </div> <!-- / .nav -->
-                
-                
-            </div> <!-- / .navigations -->
+            
         </div> <!-- / #main -->
     
     <footer>
