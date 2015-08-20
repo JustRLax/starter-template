@@ -1509,6 +1509,27 @@ li {
     }
 }
 
+.vertical-centering {
+    float: left;
+    width: 100%;
+    padding-bottom: 60px;
+    .center-container {
+        max-width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        display: table;
+        background: #dadada;
+        .center-height {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .center-width {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    }
+}
 
 /////////////////////////////IMAGES
 .images {
@@ -1784,6 +1805,29 @@ li {
     .magnify svg {
         height: 20px;
         width: 20px;
+    }
+}
+
+////////////////SVG CLipping
+.svg-clipping {
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    text-align: center;
+    .content {
+        float: left;
+        width: 100%;
+        text-align: left;
+    }
+    .wrap-image {
+        float: left;
+        width: 40%;
+        background: url(../img/image.png) no-repeat center center;
+        background-size: cover;
+        margin: 0 15px 15px 0;
+        shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
     }
 }
 
@@ -2164,7 +2208,8 @@ li {
     text-align: center;
     .popup, .popup-iframe {
         display: inline-block;
-        margin: 0 auto;
+        margin: 0 10px;
+        max-width: 320px;
     }
     .gallery {
         float: left;
@@ -2335,6 +2380,109 @@ li {
         padding: 10px 20px 20px;
         float: left;
         width: 100%;
+    }
+}
+
+///////////ANIMATIONS
+@include setup-fadeIn;
+@include setup-fadeInUp;
+@include setup-fadeInDown;
+@include setup-fadeInLeft;
+@include setup-fadeInRight;
+
+@include setup-fadeOut;
+@include setup-puffIn;
+@include setup-puffOut;
+@include setup-slideLeft;
+@include setup-slideRight;
+
+
+.animations {
+    float: left;
+    width: 100%;
+    padding-bottom: 60px;
+    text-align: center;
+    div {
+        padding: 20px 0;
+        @include span(1 of $five_layout);
+        margin-bottom: 10px;
+        background: #EEEEEE;
+        &:nth-child(5n) {
+            @include span(last 1 of $five_layout)
+        }
+        &:nth-child(5n+1) {
+            clear: both;
+        }
+        @include max-w(780px) {
+            @include span(4);
+            &:nth-child(5n) {
+                @include span(4);
+            }
+            &:nth-child(3n) {
+                @include span(last 4)
+            }
+            &:nth-child(3n+1) {
+                clear: both;
+            }
+            &:nth-child(5n+1) {
+                clear: none;
+            }
+        }
+        @include max-w(580px) {
+            @include span(6);
+            &:nth-child(5n) {
+                @include span(6);
+            }
+            &:nth-child(3n) {
+                @include span(6);
+            }
+            &:nth-child(2n) {
+                @include span(last 6);
+            }
+            &:nth-child(3n+1) {
+                clear: none;
+            }
+            &:nth-child(2n + 1) {
+                clear: both;
+            }
+        }
+        @include max-w(400px) {
+            width: 100% !important;
+            margin-right: 0 !important;
+        }
+        a {
+            display: block;
+            margin: 10px 0;
+        }
+    }
+    .animated {
+        @include animated(.4s);
+        opacity: 0;
+    }
+    .fadeIn {
+        .active {
+            @include fadeIn;
+        }
+    }
+    .fadeInDown {
+        .active {
+            @include fadeInDown;
+        }
+    }
+    .fadeInUp {
+        .active {
+            @include fadeInUp;
+        }
+    }
+    .fadeInLeft {
+        .active {
+            @include fadeInLeft;
+        }
+    }
+    .fadeInRight {
+        .active {
+            @include fadeInRight;
+        }
     }
 }
 

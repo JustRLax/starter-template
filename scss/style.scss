@@ -37,13 +37,7 @@ $purple: #2A2240;
 $teal: #0B5663;
 
 /////////ANIMATIONS
-@include setup-fadeIn;
-@include setup-fadeInDown;
-@include setup-fadeOut;
-@include setup-puffIn;
-@include setup-puffOut;
-@include setup-slideLeft;
-@include setup-slideRight;
+// @include setup-slideRight;
 /* @include animated(.2s); */
 /* @include fadeIn; */
 

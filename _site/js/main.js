@@ -10,6 +10,7 @@ $(document).ready(function() {
     
     //Keep Ratio
     $('.keep-ratio .image').keepRatio({ ratio: 800/400, calculate: 'height' });
+    $('.wrap-image').keepRatio({ ratio: 1/1, calculate: 'height' });
     
     //Sliders
     //*************Carousel
@@ -138,9 +139,16 @@ $(document).ready(function() {
 		$(this).toggleClass("active");
 		$(".side-nav-body").toggleClass("active");
 	});
-    	
-    
+	    
     //Tabs
     tabs();
     
+    //Animations 
+    $("a.animate").on("click", function(event) {
+		$(this).siblings().filter(".animated").addClass('active');
+	});
+	$("a.reset").on("click", function(event) {
+		$(this).siblings().filter(".animated").removeClass('active');
+	});
+	
 });
