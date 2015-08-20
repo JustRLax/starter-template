@@ -42,6 +42,8 @@ $teal: #0B5663;
 @include setup-fadeOut;
 @include setup-puffIn;
 @include setup-puffOut;
+@include setup-slideLeft;
+@include setup-slideRight;
 /* @include animated(.2s); */
 /* @include fadeIn; */
 

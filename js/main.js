@@ -1,42 +1,12 @@
-var Tabs = {
-  init: function() {
-    this.bindUIfunctions();
-    this.pageLoadCorrectTab();
-  },
-  bindUIfunctions: function() {
-    $(document)
-      .on("click", ".nav-tabs a[href^='#']:not('.active')", function(event) {
-        Tabs.changeTab(this.hash);
-        event.preventDefault();
-      })
-      .on("click", ".nav-tabs a.active", function(event) {
-        Tabs.toggleMobileMenu(event, this);
-        event.preventDefault();
-      });
-  },
-  changeTab: function(hash) {
-    var anchor = $("[href=" + hash + "]");
-    var div = $(hash);
-    anchor.addClass("active").parent().siblings().find("a").removeClass("active");
-    div.addClass("active").siblings().removeClass("active");
-    anchor.closest("ul").removeClass("open");
-  },
-  pageLoadCorrectTab: function() {
-    this.changeTab(document.location.hash);
-  }
-}
-
-// Font Flex
-$(function() {
-  $('.font-flex h2').fontFlex(32, 70, 10); 
-  $('.font-flex p').fontFlex(16, 32, 30); 
-});
-
 $(document).ready(function() {
     //Prevent <a> Clicks
     $("a").on("click", function(event) {
 		event.preventDefault();
 	});
+    
+    // Font Flex
+    $('.font-flex h2').fontFlex(32, 70, 10); 
+    $('.font-flex p').fontFlex(16, 32, 30); 
     
     //Keep Ratio
     $('.keep-ratio .image').keepRatio({ ratio: 800/400, calculate: 'height' });
@@ -171,6 +141,6 @@ $(document).ready(function() {
     	
     
     //Tabs
-    Tabs.init(); 
+    tabs();
     
 });

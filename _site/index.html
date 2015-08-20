@@ -966,22 +966,21 @@
                 
      <!-- //////////////////Toggles -->   
                 <h2 class="doc-subheading">Tabs</h2>
-                <div class="tabs">
-                    <nav role='navigation' class="nav-tabs">
-                        <ul>
-                            <li><a href="#tab-1">Tab 1</a></li>
-                            <li><a href="#tab-2" class="active">Tab 2</a></li>
-                            <li><a href="#tab-3">Tab 3</a></li>
-                            <li><a href="#tab-4">Tab 4</a></li>
-                            <li><a href="#tab-5">Tab 5</a></li>
-                            <li><a href="#tab-6">Tab 6</a></li>
-                        </ul>
-                    </nav> <!-- / .nav-tabs -->
-                    <div id="tab-1" class="tab-content">
+                <div class="tab-container" id="tabs_container">
+                    <ul class="tabs">
+                        <li class="active"><a href="#tab-1">Tab 1</a></li>
+                        <li><a href="#tab-2">Tab 2</a></li>
+                        <li><a href="#tab-3">Tab 3</a></li>
+                        <li><a href="#tab-4">Tab 4</a></li>
+                        <li><a href="#tab-5">Tab 5</a></li>
+                        <li><a href="#tab-6">Tab 6</a></li>
+                    </ul>
+                    <div id="tab-1" class="tab-content active">
                         <h2 class="h2">Tab 1</h2>
                         <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum non iure magnam dolores earum nemo quo tempora ab unde! Nesciunt ea iste impedit suscipit cupiditate quam earum explicabo quas veniam doloribus sed aut aliquam repellendus deleniti laudantium molestias fuga nihil quidem voluptatum atque sapiente perferendis facilis. Tempora mollitia odio?</p>
+                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum non iure magnam dolores earum nemo quo tempora ab unde! Nesciunt ea iste impedit suscipit cupiditate quam earum explicabo quas veniam doloribus sed aut aliquam repellendus deleniti laudantium molestias fuga nihil quidem voluptatum atque sapiente perferendis facilis. Tempora mollitia odio?</p>
                     </div> <!-- / #tab -->
-                    <div id="tab-2" class="active tab-content">
+                    <div id="tab-2" class="tab-content">
                         <h2 class="h2">Tab 2</h2>
                         <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur est natus esse minima nihil quidem tenetur alias pariatur. Obcaecati repudiandae temporibus provident sapiente iure doloribus praesentium voluptates dolores quia eos velit fugit cum ipsam. Deleniti fugiat maxime vel tempore illum esse illo fugit quam recusandae aut aperiam omnis at quaerat!</p>
                     </div> <!-- / #tab -->
@@ -1001,7 +1000,7 @@
                         <h2 class="h2">Tab 6</h2>
                         <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam cupiditate aliquam quisquam repellendus fugit eaque asperiores voluptatem ut accusamus soluta corporis in facere quae provident itaque magni eum repellat ducimus dolore. Beatae aperiam accusamus at voluptatem ad sunt mollitia perspiciatis tempora numquam rerum aliquam deserunt illum necessitatibus nisi omnis.</p>
                     </div> <!-- / #tab -->
-                </div> <!-- / .tabs -->
+                </div> <!-- / .tab-container -->
                 
                 <div class="accordions">
                     <h2 class="doc-subheading">Accordions</h2>

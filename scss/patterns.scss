@@ -2205,111 +2205,112 @@ li {
     margin: 0 auto;
     position: relative;
 }
-.tabs {
+.tab-container {
     width: 100%;
     max-width: 700px;
-    padding: 0 0 60px;
-    margin: 0 auto;
+    margin-bottom: 60px;
     float: left;
-    .nav-tabs {
-        ul {
-            width: 100%;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-            position: relative;
-            float: left;
+    position: relative;
+    transition: all .4s linear;
+    li {
+        display: inline-block;
+        padding: 0;
+        &.active a {
+          position: relative;
+          border-bottom-color: #000;
         }
-        li {
-            display: inline-block;
-            padding: 0;
-            vertical-align: bottom;
-        }
-        a {
-            display: inline-block;
-            text-decoration: none;
-            border-bottom: 3px solid transparent;
-            color: #000;
-            padding: 10px;
-            position: relative;
-            z-index: 10;
-            &.active {
-                  position: relative;
-                  border-bottom-color: #000;
-            }
-        }
+    }
+    a {
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 3px solid transparent;
+        color: #000;
+        padding: 10px;
+        position: relative;
+        z-index: 10;
+    }
+    ul.tabs {
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        position: relative;
+        z-index: 1000;
+        background: #fff;
+        float: left;
+        
         //Mobile Dropdown
-        ul {
-            @include max-w(500px) {
-                border: 1px solid #dadada;
-                cursor: pointer;
-                padding-top: 40px;
-                margin-bottom: 20px;
-                text-align: left;
-                a {
-                    display: none;
-                    width: 100%;
-                    height: 40px;
-                    line-height: 40px;
-                    border: none !important;
-                    padding: 0 20px;
-                    color: #747474;
-                    &:hover {
-                        color: #000;
-                    }
-                    &.active {
-                        display: block;
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        color: #000;           
-                        padding-right: 40px;
-                        &:after {
-                            content: '';
-                            position: absolute;
-                            right: 15px;
-                            top: 15px;
-                            width: 0;
-                            height: 0;
-                            border-left: 5px solid transparent;
-                            border-right: 5px solid transparent;
-                            border-top: 10px solid #dadada;
-                        }
-                    }
-                }
-                li {
-                    float: left;
-                    width: 100%;
-                    border: none;
-                }
+        @include max-w(500px) {
+            border: 1px solid #dadada;
+            cursor: pointer;
+            padding-top: 40px;
+            margin-bottom: 20px;
+            text-align: left;
+            a {
+                display: none;
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                border: none !important;
+                padding: 0 20px;
+                color: #747474;
                 &:hover {
-                    li {
-                        border-top: 1px solid #dadada;
-                        margin-bottom: -1px;
-                    }
-                    a {
-                        display: block;
+                    color: #000;
+                }
+            }
+            li {
+                float: left;
+                width: 100%;
+                border: none;
+                &.active a {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    color: #000;           
+                    padding-right: 40px;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        right: 15px;
+                        top: 15px;
+                        width: 0;
+                        height: 0;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-top: 10px solid #dadada;
                     }
                 }
             }
+            &:hover {
+                li {
+                    border-top: 1px solid #dadada;
+                    margin-bottom: -1px;
+                }
+                a {
+                    display: block;
+                }
+            }
         }
-    }
-    > div {
-        display: none;
-    }
-    > .active {
-        display: block;
     }
     .tab-content {
         padding: 20px;
         background: #dadada;
-        position: relative;
-        top: -3px;
-        float: left;
-        * {
-            @include animated(1.2s);
-            @include fadeIn;
+        position: absolute;
+        top: 47px;
+        left: 0;
+        opacity: 0;
+        transition: all .2s ease-in-out;
+        transform: translateX(-40px);
+        &.active {
+            opacity: 1;
+            transition-delay: .2s;
+            transform: translateX(0px);
+        }
+        &.inactive {
+            transform: translateX(40px);
+            opacity: 0;
         }
     }
 }
