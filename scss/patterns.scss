@@ -2384,63 +2384,69 @@ li {
 }
 
 ///////////ANIMATIONS
+
+//Animation In
 @include setup-fadeIn;
 @include setup-fadeInUp;
 @include setup-fadeInDown;
 @include setup-fadeInLeft;
 @include setup-fadeInRight;
-
-@include setup-fadeOut;
 @include setup-puffIn;
-@include setup-puffOut;
-@include setup-slideLeft;
-@include setup-slideRight;
+@include setup-slideInDown;
+@include setup-slideInUp;
+@include setup-slideInLeft;
+@include setup-slideInRight;
+@include setup-slideExpandDown;
+@include setup-slideExpandUp;
+@include setup-slideExpandLeft;
+@include setup-slideExpandRight;
+@include setup-fadeExpand;
 
+//Animation Out
+@include setup-fadeOut;
+@include setup-fadeOutUp;
+@include setup-fadeOutDown;
+@include setup-fadeOutLeft;
+@include setup-fadeOutRight;
+@include setup-puffOut;
+@include setup-slideOutDown;
+@include setup-slideOutUp;
+@include setup-slideOutLeft;
+@include setup-slideOutRight;
+@include setup-slideCompressDown;
+@include setup-slideCompressUp;
+@include setup-slideCompressLeft;
+@include setup-slideCompressRight;
+@include setup-fadeCompress;
 
 .animations {
     float: left;
     width: 100%;
     padding-bottom: 60px;
     text-align: center;
-    div {
+    .p {
+        font-size: .675em;
+    }
+    > div {
         padding: 20px 0;
-        @include span(1 of $five_layout);
         margin-bottom: 10px;
         background: #EEEEEE;
-        &:nth-child(5n) {
-            @include span(last 1 of $five_layout)
+        margin-bottom: 40px;
+        min-height: 400px;
+        @include span(3);
+        &:nth-child(4n) {
+            @include span(last 3)
         }
-        &:nth-child(5n+1) {
+        &:nth-child(4n+1) {
             clear: both;
         }
-        @include max-w(780px) {
-            @include span(4);
-            &:nth-child(5n) {
-                @include span(4);
-            }
-            &:nth-child(3n) {
-                @include span(last 4)
-            }
-            &:nth-child(3n+1) {
-                clear: both;
-            }
-            &:nth-child(5n+1) {
-                clear: none;
-            }
-        }
-        @include max-w(580px) {
+        @include max-w(680px) {
             @include span(6);
-            &:nth-child(5n) {
-                @include span(6);
-            }
-            &:nth-child(3n) {
+            &:nth-child(4n) {
                 @include span(6);
             }
             &:nth-child(2n) {
                 @include span(last 6);
-            }
-            &:nth-child(3n+1) {
-                clear: none;
             }
             &:nth-child(2n + 1) {
                 clear: both;
@@ -2453,11 +2459,18 @@ li {
         a {
             display: block;
             margin: 10px 0;
+            position: relative;
+            z-index: 10;
         }
     }
-    .animated {
+    .animateIn {
         @include animated(.4s);
         opacity: 0;
+    }
+    
+    .animateOut {
+        @include animated(.4s);
+        opacity: 1;
     }
     .fadeIn {
         .active {
@@ -2482,6 +2495,212 @@ li {
     .fadeInRight {
         .active {
             @include fadeInRight;
+        }
+    }
+    .puffIn {
+        .active {
+            @include puffIn;
+        }
+    }
+    .slideInDown {
+        .active {
+            @include slideInDown;
+        }
+    }
+    .fadeOut {
+        .active {
+            @include fadeOut;
+        }
+    }
+    .fadeOutDown {
+        .active {
+            @include fadeOutDown;
+        }
+    }
+    .fadeOutUp {
+        .active {
+            @include fadeOutUp;
+        }
+    }
+    .fadeOutLeft {
+        .active {
+            @include fadeOutLeft;
+        }
+    }
+    .fadeOutRight {
+        .active {
+            @include fadeOutRight;
+        }
+    }
+    .puffOut {
+        .active {
+            @include puffOut;
+        }
+    }
+    .slideIn {
+        float: left;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        img {
+            @include animated(.8s);
+            transform: translateX(-200%);
+        }
+    }
+    .slideOut {
+        float: left;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        img {
+            @include animated(.8s);
+        }
+    }
+    .slideInDown {
+        .slideIn.active {
+            img {
+                @include slideInDown;
+            }
+        }
+    }
+    .slideInUp {
+        .slideIn.active {
+            img {
+                @include slideInUp;
+            }
+        }
+    }
+    .slideInRight {
+        .slideIn.active {
+            img {
+                @include slideInRight;
+            }
+        }
+    }
+    .slideInLeft {
+        .slideIn.active {
+            img {
+                @include slideInLeft;
+            }
+        }
+    }
+    .slideInLeft {
+        .slideIn.active {
+            img {
+                @include slideInLeft;
+            }
+        }
+    }
+    
+    .slideOutDown {
+        .slideOut.active {
+            img {
+                @include slideOutDown;
+            }
+        }
+    }
+    
+    .slideOutUp {
+        .slideOut.active {
+            img {
+                @include slideOutUp;
+            }
+        }
+    }
+    
+    .slideOutRight {
+        .slideOut.active {
+            img {
+                @include slideOutRight;
+            }
+        }
+    }
+    
+    .slideOutLeft {
+        .slideOut.active {
+            img {
+                @include slideOutLeft;
+            }
+        }
+    }
+    
+    .slideExpandDown {
+        .slideIn.active {
+            img {
+                @include slideExpandDown;
+            }
+        }
+    }
+    
+    .slideExpandUp {
+        .slideIn.active {
+            img {
+                @include slideExpandUp;
+            }
+        }
+    }
+    
+    .slideExpandLeft {
+        .slideIn.active {
+            img {
+                @include slideExpandLeft;
+            }
+        }
+    }
+    
+    .slideExpandRight {
+        .slideIn.active {
+            img {
+                @include slideExpandRight;
+            }
+        }
+    }
+    
+    .slideCompressDown {
+        .slideOut.active {
+            img {
+                @include slideCompressDown;
+            }
+        }
+    }
+    
+    .slideCompressUp {
+        .slideOut.active {
+            img {
+                @include slideCompressUp;
+            }
+        }
+    }
+    
+    .slideCompressLeft {
+        .slideOut.active {
+            img {
+                @include slideCompressLeft;
+            }
+        }
+    }
+    
+    .slideCompressRight {
+        .slideOut.active {
+            img {
+                @include slideCompressRight;
+            }
+        }
+    }
+    
+    .fadeExpand {
+        .slideIn.active {
+            img {
+                @include fadeExpand;
+            }
+        }
+    }
+    
+    .fadeCompress {
+        .slideOut.active {
+            img {
+                @include fadeCompress;
+            }
         }
     }
 }

@@ -145,10 +145,17 @@ $(document).ready(function() {
     
     //Animations 
     $("a.animate").on("click", function(event) {
-		$(this).siblings().filter(".animated").addClass('active');
+		$(this).siblings().filter(".animateIn").addClass('active');
+		$(this).siblings().filter(".animateOut").addClass('active');
+		$(this).siblings().filter(".slideIn").addClass('active');
+		$(this).siblings().filter(".slideOut").addClass('active');
 	});
 	$("a.reset").on("click", function(event) {
-		$(this).siblings().filter(".animated").removeClass('active');
+		$(this).siblings().filter(".animateIn").removeClass('active');
+		$(this).siblings().filter(".animateOut").removeClass('active');
+		$(this).siblings().filter(".slideIn").removeClass('active');
+		$(this).siblings().filter(".slideOut").removeClass('active');
+		
 	});
 	
 });
