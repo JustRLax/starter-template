@@ -26,12 +26,23 @@ $(document).ready(function() {
       ],
     });
     
-    //*************Single Slider
-    $(".single-contained").owlCarousel({
+    //*************Single Slider Contained
+    $(".slider-container .single-contained").owlCarousel({
         navigationText: ['<svg xmlns="http://www.w3.org/2000/svg" class="icon"><use xlink:href="#shape-left-arrow"></use></svg>','<svg xmlns="http://www.w3.org/2000/svg" class="icon"><use xlink:href="#shape-right-arrow"></use></svg>'],
         navigation: true,
         pagination : true,
         singleItem: true,
+        transitionStyle: 'backSlide', //fade | goDown | fadeUp | backSlide
+        slideSpeed: 420
+    });
+    
+    //*************Single Slider Full
+    $(".slider-full .single-contained").owlCarousel({
+        navigationText: ['<svg xmlns="http://www.w3.org/2000/svg" class="icon"><use xlink:href="#shape-left-arrow"></use></svg>','<svg xmlns="http://www.w3.org/2000/svg" class="icon"><use xlink:href="#shape-right-arrow"></use></svg>'],
+        navigation: true,
+        pagination : true,
+        singleItem: true,
+        transitionStyle: 'goDown',
         slideSpeed: 420
     });
 
@@ -157,5 +168,15 @@ $(document).ready(function() {
 		$(this).siblings().filter(".slideOut").removeClass('active');
 		
 	});
+	
+	//INVIEW 
+	$('.inview').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
+      if (isInView) {
+        $('.wrap-image').addClass('active');
+      } else {
+        $('.wrap-image').removeClass('active');
+      }
+    });
+	
 	
 });

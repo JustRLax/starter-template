@@ -23,5 +23,6 @@ function tabs() {
         tabHeight = $(this).parent().parent().siblings('.tab-content').filter(tabLink).outerHeight();
         $('.tab-container').height(tabHeight);
         window.location.hash = tabLink;
+        event.preventDefault();
     });    
 }

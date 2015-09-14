@@ -43,17 +43,19 @@ module.exports = function(grunt) {
           require: 'susy'
         },
         files: {
-          'css/style-unprefixed.css': 'scss/style.scss'
+          'css/style-unprefixed.css': 'scss/style.scss',
+          'css/patterns-unprefixed.css': 'scss/patterns.scss'
         }
       }
     },
 
-    autoprefixer: {
-      global: {
-        src: 'css/style-unprefixed.css',
-        dest: 'css/style.css'
-      },
-      
+    autoprefixer: {        
+        dist: {
+            files: {
+                'css/style.css': 'css/style-unprefixed.css',
+                'css/patterns.css': 'css/patterns-unprefixed.css'
+            }
+        },
     },
 
     shell: {
