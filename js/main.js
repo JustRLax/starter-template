@@ -4,6 +4,26 @@ $(document).ready(function() {
 		event.preventDefault();
 	});
     
+    //Heading Pattern Toggles
+    $(".heading").on("click", function(event) {
+		$(this).next('.section').toggleClass('active');
+		$(this).toggleClass('active');
+	});
+	
+	//Code Toggle 
+	$(".code-button").on("click", function() {
+    	    var that = this;
+		$(that).next('.code').removeClass('inactive');
+		$(that).next('.code').addClass('active').append('<span class="close">X</span>');	
+        $(that).next(".code").children(".close").on("click", function() {
+           $(that).next(".code").addClass('inactive');
+            setTimeout(function() {
+                $(that).next(".code").removeClass('active');
+            }, 1000);
+            $(that).next(".code").children(".close").remove();
+        });
+	});
+    
     // Font Flex
     $('.font-flex h2').fontFlex(32, 70, 10); 
     $('.font-flex p').fontFlex(16, 32, 30); 

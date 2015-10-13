@@ -17,7 +17,8 @@ module.exports = function(grunt) {
 				'js/vendor/jquery.bxslider.js',
 				'js/vendor/magnific.js',
 				'js/vendor/tabs.js',
-				'js/vendor/jquery.inview.js'
+				'js/vendor/jquery.inview.js',
+				'js/vendor/prism.js'
 			],
 			dest: 'js/plugins.js'
 		}
@@ -43,8 +44,7 @@ module.exports = function(grunt) {
           require: 'susy'
         },
         files: {
-          'css/style-unprefixed.css': 'scss/style.scss',
-          'css/patterns-unprefixed.css': 'scss/patterns.scss'
+          'css/style-unprefixed.css': 'scss/style.scss'
         }
       }
     },
@@ -52,8 +52,7 @@ module.exports = function(grunt) {
     autoprefixer: {        
         dist: {
             files: {
-                'css/style.css': 'css/style-unprefixed.css',
-                'css/patterns.css': 'css/patterns-unprefixed.css'
+                'css/style.css': 'css/style-unprefixed.css'
             }
         },
     },
@@ -137,7 +136,7 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   grunt.registerTask('serve', ['shell:jekyllServe']);
-  grunt.registerTask('build', 'concat');
+  grunt.registerTask('build', 'concat'/* , 'imagemin' */);
   grunt.registerTask('default', ['sass', 'autoprefixer', 'svgstore', /* 'imagemin', */ 'shell:jekyllBuild', 'watch']);
 
 };

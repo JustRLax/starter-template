@@ -22,7 +22,7 @@ function tabs() {
         $(this).parent().parent().siblings('.tab-content').filter(tabLink).addClass('active');
         tabHeight = $(this).parent().parent().siblings('.tab-content').filter(tabLink).outerHeight();
         $('.tab-container').height(tabHeight);
-        window.location.hash = tabLink;
+        //window.location.hash = tabLink;
         event.preventDefault();
     });    
 }

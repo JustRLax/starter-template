@@ -4,11 +4,15 @@
 
 .icon-check { background-image: url('png/check.png'); background-repeat: no-repeat; }
 
+.icon-checkbox { background-image: url('png/checkbox.png'); background-repeat: no-repeat; }
+
 .icon-city { background-image: url('png/city.png'); background-repeat: no-repeat; }
 
 .icon-close { background-image: url('png/close.png'); background-repeat: no-repeat; }
 
 .icon-cloud { background-image: url('png/cloud.png'); background-repeat: no-repeat; }
+
+.icon-code { background-image: url('png/code.png'); background-repeat: no-repeat; }
 
 .icon-desktop { background-image: url('png/desktop.png'); background-repeat: no-repeat; }
 
