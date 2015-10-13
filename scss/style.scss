@@ -206,7 +206,7 @@ h1.title {
     font-weight: 700;
     font-size: 2.5em;
     text-align: center;
-    padding: 10px 40px;
+    padding: 10px 40px 20px;
     color: #fff;
     text-shadow: 3px 3px 1px RGBA(144, 155, 153, .8);
 }
@@ -214,6 +214,8 @@ h1.title {
     float: left;
     width: 100%;
     position: relative;
+    display: none;
+    @include animated(.5s);
 }
 .code-button {
     position: absolute;
@@ -300,14 +302,10 @@ h1.title {
     width: 100%;
 }
 .font-list {
-    padding: 10px 0;
     text-align: center;
     li {
         margin-bottom: 10px;
     }
-}
-.font2 {
-    font-family: $font-2;
 }
 .typography {
     max-width: 700px;
@@ -404,13 +402,15 @@ li {
     }
 }
 .fitted {
-    width: 100%;
-    float: left;
+    max-width: 700px;
+    padding: 0 20px;
+    margin: 0 auto;
     padding-bottom: 60px;
     font-family: $font-1;
     .font-flex {
         h2 {
             font-size: 4.5em;
+            font-weight: 900;
             line-height: 115%;
             text-transform: uppercase;
             letter-spacing: -2px;

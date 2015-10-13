@@ -23,8 +23,8 @@ title: Patterns
                             </svg>
                         </span>
                         <div class="code">
-                            <span class="close">X</span>
-                            <h4 class="codeheading">SASS</h4><pre><code class="language-scss">
+                            <h4 class="codeheading">SASS</h4>
+                            <pre><code class="language-scss">
 $font-1: &#39;Open Sans&#39;, sans-serif;
 $font-2: &#39;Open Sans Condensed&#39;, sans-serif;
 $font-3: &#39;Mrs Sheppards&#39;, cursive;
@@ -74,7 +74,6 @@ $font-4: &#39;Source Code Pro&#39;;</code></pre>
                             </svg>
                         </span>
                         <div class="code">
-                            <span class="close">X</span>
                             <h4 class="codeheading">HTML</h4>
                             <pre><code class="language-markup">&lt;p class=&quot;p intro&quot;&gt;Borem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, eum, facere! Eligendi, neque, voluptas quibusdam enim culpa dignissimos dolor in voluptatem sapiente facilis eveniet ipsa quod tempore aut ad aliquid est architecto alias sed corporis esse consequuntur suscipit dolore voluptatum magni officiis iusto similique dicta quidem ut ullam distinctio quos.&lt;/p&gt;
 &lt;h1 class=&quot;h1&quot;&gt;This is a heading 1&lt;/h1&gt;
@@ -199,6 +198,31 @@ li {
 }</code></pre>
                         </div> <!-- / .code -->
                     </div> <!-- / .pattern-container -->
+                    <div class="pattern-container">
+                        <h3 class="subheading">Font Flex</h3>
+                        <div class="pattern">
+                            <div class="fitted">
+                                <div class="font-flex">
+                                    <h2>This is a nice heading</h2>
+                                    <p>This is a description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse fuga accusantium numquam. Facilis, assumenda, itaque vitae mollitia incidunt tempore similique!</p>
+                                </div> <!-- / .font-flex -->
+                            </div> <!-- / .fitted -->
+                        </div> <!-- / .pattern -->
+                        <span class="code-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                <use xlink:href="#shape-code"></use>
+                            </svg>
+                        </span>
+                        <div class="code">
+                            <h4 class="codeheading">HTML</h4>
+                            <pre><code class="language-markup">&lt;div class=&quot;font-flex&quot;&gt;
+    &lt;h2&gt;This is a nice heading&lt;/h2&gt;
+    &lt;p&gt;This is a description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse fuga accusantium numquam. Facilis, assumenda, itaque vitae mollitia incidunt tempore similique!&lt;/p&gt;
+&lt;/div&gt; &lt;!-- / .font-flex --&gt;</code></pre>
+                            <h4 class="codeheading">JS</h4>
+                            <pre><code class="language-js">$(&#39;.font-flex h2&#39;).fontFlex(32, 70, 10); 
+$(&#39;.font-flex p&#39;).fontFlex(16, 32, 30); </code></pre>
+                        </div> <!-- / .code -->
                 </div> <!-- / .section -->
             </div> <!-- / .site-container -->
         </div> <!-- / #main -->

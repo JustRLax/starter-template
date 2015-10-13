@@ -6,7 +6,7 @@ $(document).ready(function() {
     
     //Heading Pattern Toggles
     $(".heading").on("click", function(event) {
-		$(this).next('.section').toggleClass('active');
+		$(this).next('.section').slideToggle(420);
 		$(this).toggleClass('active');
 	});
 	
