@@ -215,8 +215,16 @@ h1.title {
     float: left;
     width: 100%;
     position: relative;
-    display: none;
+    visibility: hidden;
     @include animated(.5s);
+    &.loaded {
+	    display: none;
+	    visibility: visible;
+    }
+    &.active {
+	    display: block;
+	    @include slideInUp;
+    }
 }
 .code-button {
     position: absolute;
@@ -243,9 +251,10 @@ h1.title {
     float: left;
     width: 100%;
     position: relative;
+    overflow: hidden;
     padding: 50px 0 40px;
     &.tall {
-        min-height: 400px;
+        padding-bottom: 200px;
     }
     pre {
         width: 100%;
@@ -263,6 +272,7 @@ h1.title {
     .code {
         position: absolute;
         z-index: 2000;
+	    overflow: scroll;
         background-image: linear-gradient(RGBA(117, 132, 142, .9), RGBA(85, 51, 67, 1));
         border-bottom: 1px solid #000;
         width: 100%;
@@ -270,7 +280,7 @@ h1.title {
         left: 0;
         top: 0;
         display: none;
-        overflow: scroll;
+        padding-bottom: 40px;
         @include animated(.8s);
         &.active {
             display: block;
@@ -808,7 +818,6 @@ li {
         }
     }
 }
-
 .inline-contained {
     float: left;
     width: 100%;
@@ -1620,155 +1629,150 @@ li {
 
 
 ///////////////////////LAYOUT
-.layout {
-    width: 100%;
-    float: left;
-    border-bottom: 1px dashed #cccccc;
-    .wrap {
-        @include container;
-        margin: 0 auto;
+.wrap {
+    @include container;
+    margin: 0 auto;
+}
+.sixth {
+    @include span(2);
+    margin-bottom: 10px;
+    &:nth-child(6n) {
+        @include span(last 2)
     }
-    .sixth {
-        @include span(2);
-        margin-bottom: 10px;
-        &:nth-child(6n) {
-            @include span(last 2)
-        }
-        &:nth-child(6n + 1) {
-            clear: both;
-        }
-        @include max-w(960px) {
-            @include span(4);
-            &:nth-child(3n) {
-                @include span(last 4)
-            }
-            &:nth-child(3n+1) {
-                clear: both;
-            }
-            &:nth-child(6n + 1) {
-                clear: none;
-            }
-        }
-        @include max-w(580px) {
-            @include span(6);
-            &:nth-child(3n) {
-                @include span(6);
-            }
-            &:nth-child(2n) {
-                @include span(last 6);
-            }
-            &:nth-child(3n+1) {
-                clear: none;
-            }
-            &:nth-child(2n + 1) {
-                clear: both;
-            }
-        }
-        @include max-w(400px) {
-            width: 100% !important;
-            margin-right: 0 !important;
-        }
+    &:nth-child(6n + 1) {
+        clear: both;
     }
-    .fifth {
-        @include span(1 of $five_layout);
-        margin-bottom: 10px;
-        &:nth-child(5n) {
-            @include span(last 1 of $five_layout)
-        }
-        &:nth-child(5n+1) {
-            clear: both;
-        }
-        @include max-w(780px) {
-            @include span(4);
-            &:nth-child(5n) {
-                @include span(4);
-            }
-            &:nth-child(3n) {
-                @include span(last 4)
-            }
-            &:nth-child(3n+1) {
-                clear: both;
-            }
-            &:nth-child(5n+1) {
-                clear: none;
-            }
-        }
-        @include max-w(580px) {
-            @include span(6);
-            &:nth-child(5n) {
-                @include span(6);
-            }
-            &:nth-child(3n) {
-                @include span(6);
-            }
-            &:nth-child(2n) {
-                @include span(last 6);
-            }
-            &:nth-child(3n+1) {
-                clear: none;
-            }
-            &:nth-child(2n + 1) {
-                clear: both;
-            }
-        }
-        @include max-w(400px) {
-            width: 100% !important;
-            margin-right: 0 !important;
-        }
-    }
-    .fourth {
-        @include span(3);
-        margin-bottom: 10px;
-        &:nth-child(4n) {
-            @include span(last 3)
-        }
-        &:nth-child(4n+1) {
-            clear: both;
-        }
-        @include max-w(680px) {
-            @include span(6);
-            &:nth-child(4n) {
-                @include span(6);
-            }
-            &:nth-child(2n) {
-                @include span(last 6);
-            }
-            &:nth-child(2n + 1) {
-                clear: both;
-            }
-        }
-        @include max-w(400px) {
-            width: 100% !important;
-            margin-right: 0 !important;
-        }
-    }
-    .third {
+    @include max-w(960px) {
         @include span(4);
-        margin-bottom: 10px;
         &:nth-child(3n) {
             @include span(last 4)
         }
         &:nth-child(3n+1) {
             clear: both;
         }
-        @include max-w(530px) {
-            width: 100% !important;
-            margin-right: 0 !important;
+        &:nth-child(6n + 1) {
+            clear: none;
         }
     }
-    .half {
+    @include max-w(580px) {
         @include span(6);
-        margin-bottom: 10px;
-        &:nth-child(2n) {
-            @include span(last 6)
+        &:nth-child(3n) {
+            @include span(6);
         }
-        &:nth-child(2n+1) {
+        &:nth-child(2n) {
+            @include span(last 6);
+        }
+        &:nth-child(3n+1) {
+            clear: none;
+        }
+        &:nth-child(2n + 1) {
             clear: both;
         }
-        @include max-w(400px) {
-            width: 100% !important;
-            margin-right: 0 !important;
+    }
+    @include max-w(400px) {
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+}
+.fifth {
+    @include span(1 of $five_layout);
+    margin-bottom: 10px;
+    &:nth-child(5n) {
+        @include span(last 1 of $five_layout)
+    }
+    &:nth-child(5n+1) {
+        clear: both;
+    }
+    @include max-w(780px) {
+        @include span(4);
+        &:nth-child(5n) {
+            @include span(4);
         }
+        &:nth-child(3n) {
+            @include span(last 4)
+        }
+        &:nth-child(3n+1) {
+            clear: both;
+        }
+        &:nth-child(5n+1) {
+            clear: none;
+        }
+    }
+    @include max-w(580px) {
+        @include span(6);
+        &:nth-child(5n) {
+            @include span(6);
+        }
+        &:nth-child(3n) {
+            @include span(6);
+        }
+        &:nth-child(2n) {
+            @include span(last 6);
+        }
+        &:nth-child(3n+1) {
+            clear: none;
+        }
+        &:nth-child(2n + 1) {
+            clear: both;
+        }
+    }
+    @include max-w(400px) {
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+}
+.fourth {
+    @include span(3);
+    margin-bottom: 10px;
+    &:nth-child(4n) {
+        @include span(last 3)
+    }
+    &:nth-child(4n+1) {
+        clear: both;
+    }
+    @include max-w(680px) {
+        @include span(6);
+        &:nth-child(4n) {
+            @include span(6);
+        }
+        &:nth-child(2n) {
+            @include span(last 6);
+        }
+        &:nth-child(2n + 1) {
+            clear: both;
+        }
+    }
+    @include max-w(400px) {
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+}
+.third {
+    @include span(4);
+    margin-bottom: 10px;
+    &:nth-child(3n) {
+        @include span(last 4)
+    }
+    &:nth-child(3n+1) {
+        clear: both;
+    }
+    @include max-w(530px) {
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+}
+.half {
+    @include span(6);
+    margin-bottom: 10px;
+    &:nth-child(2n) {
+        @include span(last 6)
+    }
+    &:nth-child(2n+1) {
+        clear: both;
+    }
+    @include max-w(400px) {
+        width: 100% !important;
+        margin-right: 0 !important;
     }
 }
 
@@ -1778,7 +1782,7 @@ li {
     padding-bottom: 60px;
     .center-container {
         max-width: 500px;
-        height: 500px;
+        height: 400px;
         margin: 0 auto;
         display: table;
         background: #dadada;
@@ -1787,9 +1791,10 @@ li {
             vertical-align: middle;
         }
         .center-width {
-            max-width: 300px;
+            max-width: 500px;
             margin: 0 auto;
             padding: 20px;
+            text-align: center;
         }
     }
 }
@@ -1824,6 +1829,7 @@ li {
     float: left;
     width: 100%;
     margin: 20px 0 60px;
+    text-align: center;
     img {
         max-width: 80px;
     }
@@ -1921,8 +1927,9 @@ li {
     }
 }
 .web-icons {
-    float: left;
-    width: 100%;
+	max-width: 550px;
+	margin: 0 auto;
+	text-align: center;
     padding: 20px 0 40px;
     a {
         color: #000;
@@ -2076,7 +2083,7 @@ li {
     display: block;
     max-width: 1000px;
     margin: 0 auto;
-    padding-bottom: 60px;
+    padding: 0 40px 60px;
     text-align: center;
     .content {
         float: left;
@@ -2085,6 +2092,7 @@ li {
     }
     .wrap-image {
         float: left;
+        max-width: 400px;
         width: 40%;
         background: url(../img/image.png) no-repeat center center;
         background-size: cover;
@@ -2219,33 +2227,6 @@ li {
             background: #007BB7;
         }
     }
-    .search-form {
-        float: left;
-        width: 100%;
-    }
-    .search {
-        float: none;
-        margin: 0 auto;
-        max-width: 100%;
-        width: 240px;
-        position: relative;
-    }
-    input[type=search] {
-        font-family: $font-1;
-        font-size: 1em;
-        display: inline-block;
-        width: 240px;
-        height: 40px;
-        padding: 10px 60px 10px 10px;
-        outline: 0;
-        border-radius: 0;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        border: 1px solid #dddddd;
-        &:focus {
-            border-color: #00AEE2;
-        }
-    }
     input[type=checkbox] {
         position: relative;
         cursor: pointer;
@@ -2317,6 +2298,34 @@ li {
             }
         }
     }
+    .search-form {
+        float: left;
+        width: 100%;
+    }
+    .search {
+        float: none;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 240px;
+        position: relative;
+    }
+    input[type=search] {
+        font-family: $font-1;
+        font-size: 1em;
+        display: inline-block;
+        width: 500px;
+        max-width: 100%;
+        height: 40px;
+        padding: 10px 60px 10px 10px;
+        outline: 0;
+        border-radius: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: 1px solid #dddddd;
+        &:focus {
+            border-color: #00AEE2;
+        }
+    }
     #search-submit {
         width: 38px;
         height: 38px;
@@ -2343,30 +2352,6 @@ li {
 }
 
 ////////////////SLIDERS
-.slider-container {
-    float: left;
-    width: 100%;
-    padding: 0px 20px 60px;
-    .owl-prev, 
-    .owl-next {
-        color: #A0A0A0;
-        position: absolute;
-        top: 50%;
-        margin-top: -10px;
-        @extend .transition;
-        &:hover {
-            color: #00B9DF;
-        }
-        svg {
-            width: 12px;
-            height: 20px;
-            fill: currentColor;
-        }
-    }
-    .owl-prev {left: -22px;}
-    .owl-next {right: -22px;}
-    
-}
 .slider-full {
     width: 100%;
     padding: 0 0 60px;
@@ -2410,6 +2395,30 @@ li {
         }
     }
 }
+.slider-container {
+    float: left;
+    width: 100%;
+    padding: 0px 40px 60px;
+    .owl-prev, 
+    .owl-next {
+        color: #A0A0A0;
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+        @extend .transition;
+        &:hover {
+            color: #00B9DF;
+        }
+        svg {
+            width: 12px;
+            height: 20px;
+            fill: currentColor;
+        }
+    }
+    .owl-prev {left: -22px;}
+    .owl-next {right: -22px;}
+    
+}
 .carousel {
     float: left;
     width: 100%;
@@ -2424,6 +2433,10 @@ li {
     width: 100%;
     float: left;
     padding: 0 0 60px;
+    display: block;
+    > li {
+	    float: left;
+    }
     .bx-prev, 
     .bx-next {
         color: #fff;
@@ -2540,7 +2553,7 @@ li {
 .lightbox-container {
     float: left;
     width: 100%;
-    padding: 0 0 60px;
+    padding: 0 40px 60px;
     text-align: center;
     .popup, .popup-iframe {
         display: inline-block;
@@ -2589,8 +2602,8 @@ li {
 .tab-container {
     width: 100%;
     max-width: 700px;
-    margin-bottom: 60px;
-    float: left;
+    min-height: 400px;
+    margin: 0 auto 40px;
     position: relative;
     transition: all .4s linear;
     li {

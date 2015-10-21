@@ -5,9 +5,15 @@ $(document).ready(function() {
 	});
     
     //Heading Pattern Toggles
+    $(window).load(function(){
+    		$('.section').addClass('loaded');
+    });
     $(".heading").on("click", function(event) {
-		$(this).next('.section').slideToggle(420);
+		$(this).next('.section').toggleClass('active');
 		$(this).toggleClass('active');
+		$('.wrap-image').keepRatio({ ratio: 1/1, calculate: 'height' });
+		//Tabs
+	    tabs();
 	});
 	
 	//Code Toggle 
@@ -67,7 +73,7 @@ $(document).ready(function() {
     });
 
     
-    //*************Custom Pager Slider    
+    //*************Custom Pager Slider
     $('.pager-slider').bxSlider({
         pagerCustom: '.custom-pager',
         slideSpeed: 420,
@@ -171,8 +177,6 @@ $(document).ready(function() {
 		$(".side-nav-body").toggleClass("active");
 	});
 	    
-    //Tabs
-    tabs();
     
     //Animations 
     $("a.animate").on("click", function(event) {
